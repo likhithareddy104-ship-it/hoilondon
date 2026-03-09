@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HOI Business Solutions | Business Support & Social Media Advertising London</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff;--off:#fafaf8;--cream:#f5f2ed;--border:#e8e4de;
+  --text:#1a1814;--mid:#4a4640;--light:#8a8480;
+  --gold:#b8966a;--gold2:#9a7a52;--gold3:#e8d5bc;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:#fff;color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5rem;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+nav.sc{box-shadow:0 2px 24px rgba(0,0,0,.06);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--text);text-decoration:none;letter-spacing:.06em;}
+.logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--mid);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--text)!important;color:#fff!important;padding:.65rem 1.5rem;border-radius:2px;font-weight:600!important;}
+.nav-cta:hover{background:var(--gold)!important;}
+
+/* BUTTONS */
+.btn{display:inline-block;text-decoration:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.06em;border-radius:2px;transition:background .25s,color .25s,border-color .25s;}
+.btn-dark{background:var(--text);color:#fff;padding:.95rem 2.2rem;border:2px solid var(--text);}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold);}
+.btn-border{background:transparent;color:var(--text);padding:.95rem 2.2rem;border:2px solid var(--border);}
+.btn-border:hover{border-color:var(--gold);color:var(--gold);}
+.btn-gold{background:var(--gold);color:#fff;padding:1rem 2.5rem;border:2px solid var(--gold);}
+.btn-gold:hover{background:transparent;color:var(--gold);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:76px;}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5rem;}
+.eyebrow{display:inline-flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.08;margin-bottom:1.75rem;}
+h1 em,h2 em{font-style:italic;color:var(--gold);}
+.hero-desc{font-size:1.05rem;font-weight:300;color:var(--mid);line-height:1.75;max-width:440px;margin-bottom:2.5rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.hero-r{position:relative;overflow:hidden;}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.hero-card{position:absolute;bottom:2.5rem;left:2rem;right:2rem;background:rgba(255,255,255,.97);border:1px solid var(--border);border-radius:4px;padding:1.5rem 2rem;display:flex;gap:2.5rem;}
+.hstat h4{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold);line-height:1;}
+.hstat p{font-size:.78rem;color:var(--mid);margin-top:.25rem;}
+
+/* TRUST */
+.trust{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 5rem;display:flex;align-items:center;overflow-x:auto;gap:0;}
+.ti{display:flex;align-items:center;gap:.6rem;white-space:nowrap;font-size:.78rem;font-weight:500;color:var(--mid);padding:0 2.5rem;border-right:1px solid var(--border);}
+.ti:first-child{padding-left:0;}
+.ti:last-child{border-right:none;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* SECTIONS */
+section{padding:6rem 5rem;}
+.sec-eye{display:inline-flex;align-items:center;gap:.75rem;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.sec-eye::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3.5vw,3.4rem);font-weight:300;line-height:1.12;margin-bottom:1.25rem;}
+.sec-sub{font-size:.98rem;color:var(--mid);line-height:1.75;font-weight:300;max-width:520px;}
+.divline{width:48px;height:1px;background:var(--gold);margin:1.75rem 0;}
+
+/* SERVICES */
+.svc-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+.scard{background:#fff;padding:2.75rem;position:relative;transition:background .3s;overflow:hidden;}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+.scard:hover{background:var(--off);}
+.scard:hover::before{transform:scaleX(1);}
+.sico{width:48px;height:48px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.5rem;background:var(--cream);}
+.scard h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;margin-bottom:.75rem;}
+.scard p{font-size:.87rem;color:var(--mid);line-height:1.7;font-weight:300;}
+.stag{display:inline-block;margin-top:1.25rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .75rem;border-radius:1px;}
+.tops{background:#f0eeeb;color:var(--mid);}
+.tgrowth{background:#f5ede0;color:var(--gold2);}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;}
+.about-img{overflow:hidden;min-height:560px;}
+.about-img img{width:100%;height:100%;object-fit:cover;}
+.about-txt{padding:5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);}
+.apts{margin-top:2rem;}
+.apt{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 0;border-bottom:1px solid var(--border);}
+.apt:last-child{border-bottom:none;}
+.apt-ico{width:36px;height:36px;flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.apt h4{font-size:.92rem;font-weight:600;margin-bottom:.2rem;}
+.apt p{font-size:.83rem;color:var(--mid);line-height:1.6;font-weight:300;}
+
+/* HOW */
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.how-img{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.1);}
+.how-img img{width:100%;height:480px;object-fit:cover;}
+.how-badge{position:absolute;bottom:2rem;left:2rem;right:2rem;background:#fff;border-radius:4px;padding:1.25rem 1.5rem;border-left:3px solid var(--gold);}
+.how-badge p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--mid);line-height:1.6;}
+.how-badge span{font-size:.72rem;font-weight:600;color:var(--gold);display:block;margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase;}
+.steps{margin-top:2.5rem;}
+.step{display:flex;gap:1.75rem;padding:1.75rem 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.snum{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold3);line-height:1;min-width:2.5rem;}
+.sbody h3{font-size:.95rem;font-weight:600;margin-bottom:.35rem;}
+.sbody p{font-size:.85rem;color:var(--mid);line-height:1.65;font-weight:300;}
+
+/* WHO */
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.wcard{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
+.wcard:hover{box-shadow:0 12px 40px rgba(0,0,0,.08);transform:translateY(-4px);}
+.wcard-img{height:180px;overflow:hidden;}
+.wcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.wcard:hover .wcard-img img{transform:scale(1.04);}
+.wcard-body{padding:1.5rem;}
+.wcard-body h3{font-size:.95rem;font-weight:600;margin-bottom:.4rem;}
+.wcard-body p{font-size:.82rem;color:var(--mid);line-height:1.55;font-weight:300;}
+
+/* PRICING TEASER */
+.ptease{text-align:center;max-width:640px;margin:0 auto;}
+.ptease-opts{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin:2.5rem 0;}
+.popt{text-align:center;}
+.popt h4{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);}
+.popt p{font-size:.82rem;color:var(--light);margin-top:.25rem;}
+.pdiv{width:1px;background:var(--border);}
+
+/* CTA SPLIT */
+.cta-wrap{display:grid;grid-template-columns:1fr 1fr;}
+.cta-img{overflow:hidden;min-height:420px;}
+.cta-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.7);}
+.cta-txt{padding:5rem;display:flex;flex-direction:column;justify-content:center;background:var(--text);}
+.cta-txt .sec-eye{color:var(--gold3);}
+.cta-txt .sec-eye::before{background:var(--gold3);}
+.cta-txt h2{color:#fff;}
+.cta-txt p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:2rem;font-weight:300;}
+
+/* CONTACT */
+.cont-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;margin-top:3.5rem;}
+.ci-list{}
+.ci{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem 0;border-bottom:1px solid var(--border);}
+.ci:last-child{border-bottom:none;}
+.ci-ico{width:40px;height:40px;flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.ci-body h4{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;}
+.ci-body p,.ci-body a{font-size:.92rem;color:var(--mid);text-decoration:none;font-weight:300;}
+.ci-body a:hover{color:var(--gold);}
+.form{display:flex;flex-direction:column;gap:1rem;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form input,.form select,.form textarea{background:#fff;border:1px solid var(--border);border-radius:2px;padding:.9rem 1.1rem;color:var(--text);font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:300;width:100%;outline:none;transition:border-color .2s;}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold);}
+.form input::placeholder,.form textarea::placeholder{color:var(--light);}
+.form textarea{resize:vertical;min-height:110px;}
+.form select{color:var(--mid);}
+.form button{background:var(--text);color:#fff;padding:1rem;border:2px solid var(--text);border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;width:100%;transition:background .25s,border-color .25s;}
+.form button:hover{background:var(--gold);border-color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--text);padding:3rem 5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#fff;}
+.flogo span{color:var(--gold);}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:var(--gold);}
+.fcopy{font-size:.75rem;color:rgba(255,255,255,.25);}
+
+/* ANIMATE */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.au{animation:fadeUp .7s ease both;}
+.au2{animation:fadeUp .7s .1s ease both;}
+.au3{animation:fadeUp .7s .2s ease both;}
+.au4{animation:fadeUp .7s .3s ease both;}
+.ai{animation:fadeIn 1s .2s ease both;}
+.rev{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.rev.on{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:1rem 2rem;}
+  .nav-links{display:none;}
+  section{padding:4rem 2rem;}
+  .hero{grid-template-columns:1fr;}
+  .hero-l{padding:4rem 2rem;}
+  .hero-r{min-height:400px;}
+  .trust{padding:1rem 2rem;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .about-wrap{grid-template-columns:1fr;}
+  .about-img{min-height:320px;}
+  .about-txt{padding:3rem 2rem;}
+  .how-grid{grid-template-columns:1fr;gap:3rem;}
+  .who-grid{grid-template-columns:1fr 1fr;}
+  .cta-wrap{grid-template-columns:1fr;}
+  .cta-img{min-height:260px;}
+  .cta-txt{padding:3rem 2rem;}
+  .cont-grid{grid-template-columns:1fr;gap:3rem;}
+  footer{padding:2rem;flex-direction:column;text-align:center;}
+  .frow{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:1fr;}
+  .who-grid{grid-template-columns:1fr;}
+  .hero-card{flex-wrap:wrap;gap:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#home" class="logo">HOI <span>Business Solutions</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#who">Who We Help</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" style="padding:0;padding-top:76px;">
+  <div class="hero-l">
+    <div class="eyebrow au">London's Business Growth Partner</div>
+    <h1 class="au2">Operations handled.<br><em>Growth delivered.</em></h1>
+    <p class="hero-desc au3">HOI Business Solutions helps London's small businesses run smoother and grow faster — from professional admin and HR support to results-driven social media advertising.</p>
+    <div class="hero-btns au4">
+      <a href="#contact" class="btn btn-dark">Book a Free Consultation</a>
+      <a href="#services" class="btn btn-border">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-r ai">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNzAwIiB2aWV3Qm94PSIwIDAgOTAwIDcwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZGRkMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q0YzRiMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9IndhbGwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlN2RhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTBkNGMzIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZGVzayIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNiODkyNmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4YTY4NDUiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ3aW4iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZGRlZWZmIiBzdG9wLW9wYWNpdHk9IjAuOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M4ZTBmOCIgc3RvcC1vcGFjaXR5PSIwLjciLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzdWl0IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJkM2E0ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMjgzNiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzb2Z0Ij48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiLz48L2ZpbHRlcj4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlRHJvcFNoYWRvdyBkeD0iMiIgZHk9IjQiIHN0ZERldmlhdGlvbj0iNiIgZmxvb2Qtb3BhY2l0eT0iMC4xNSIvPjwvZmlsdGVyPgogIDwvZGVmcz4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjYmcpIi8+CiAgPCEtLSBXYWxsIC0tPgogIDxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNDgwIiBmaWxsPSJ1cmwoI3dhbGwpIi8+CiAgPCEtLSBXaW5kb3cgd2l0aCBsaWdodCAtLT4KICA8cmVjdCB4PSI0ODAiIHk9IjMwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjM2MCIgcng9IjQiIGZpbGw9InVybCgjd2luKSIvPgogIDxyZWN0IHg9IjQ4MCIgeT0iMzAiIHdpZHRoPSI0IiBoZWlnaHQ9IjM2MCIgZmlsbD0iI2M4YmZiMCIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iNjYwIiB5PSIzMCIgd2lkdGg9IjQiIGhlaWdodD0iMzYwIiBmaWxsPSIjYzhiZmIwIiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB4PSI0ODAiIHk9IjIwOCIgd2lkdGg9IjM2NCIgaGVpZ2h0PSI0IiBmaWxsPSIjYzhiZmIwIiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIFdpbmRvdyBmcmFtZSAtLT4KICA8cmVjdCB4PSI0NzYiIHk9IjI2IiB3aWR0aD0iMzY4IiBoZWlnaHQ9IjM2OCIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2MwYjVhNSIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPCEtLSBGbG9vciAtLT4KICA8cmVjdCB5PSI0ODAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMjIwIiBmaWxsPSIjYzhiOTlhIi8+CiAgPCEtLSBGbG9vciBsaW5lcyBwZXJzcGVjdGl2ZSAtLT4KICA8bGluZSB4MT0iMCIgeTE9IjQ4MCIgeDI9IjkwMCIgeTI9IjQ4MCIgc3Ryb2tlPSIjYjhhODhhIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iMCIgeTE9IjU0MCIgeDI9IjkwMCIgeTI9IjU0MCIgc3Ryb2tlPSIjYjhhODhhIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNSIvPgogIDxsaW5lIHgxPSIwIiB5MT0iNjAwIiB4Mj0iOTAwIiB5Mj0iNjAwIiBzdHJva2U9IiNiOGE4OGEiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIi8+CiAgPCEtLSBEZXNrIHN1cmZhY2UgLS0+CiAgPHJlY3QgeD0iNDAiIHk9IjQ1MCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiNjNDlhNmMiLz4KICA8cmVjdCB4PSI0MCIgeT0iNDY4IiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjE4MCIgcng9IjIiIGZpbGw9InVybCgjZGVzaykiLz4KICA8IS0tIERlc2sgbGVncyAtLT4KICA8cmVjdCB4PSI2MCIgeT0iNTYwIiB3aWR0aD0iMTgiIGhlaWdodD0iMTQwIiBmaWxsPSIjOGE2ODQ1Ii8+CiAgPHJlY3QgeD0iNjYyIiB5PSI1NjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNDAiIGZpbGw9IiM4YTY4NDUiLz4KICA8IS0tIExhcHRvcCAtLT4KICA8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+CiAgICA8cmVjdCB4PSIyMzAiIHk9IjM3MCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSI4MiIgcng9IjYiIGZpbGw9IiMyYTJkMzUiLz4KICAgIDxyZWN0IHg9IjIzNiIgeT0iMzc1IiB3aWR0aD0iMjQ4IiBoZWlnaHQ9IjcyIiByeD0iNCIgZmlsbD0iIzFhMWQyNCIvPgogICAgPHJlY3QgeD0iMjQwIiB5PSIzNzgiIHdpZHRoPSIyNDAiIGhlaWdodD0iNjYiIHJ4PSIzIiBmaWxsPSIjMjU2M2ViIiBvcGFjaXR5PSIwLjciLz4KICAgIDwhLS0gU2NyZWVuIGNvbnRlbnQgbGluZXMgLS0+CiAgICA8cmVjdCB4PSIyNTAiIHk9IjM4NSIgd2lkdGg9IjEyMCIgaGVpZ2h0PSI4IiByeD0iMiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOSIvPgogICAgPHJlY3QgeD0iMjUwIiB5PSIzOTgiIHdpZHRoPSIxODAiIGhlaWdodD0iNSIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjUiLz4KICAgIDxyZWN0IHg9IjI1MCIgeT0iNDA4IiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ii8+CiAgICA8cmVjdCB4PSIyNTAiIHk9IjQxOCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ii8+CiAgICA8cmVjdCB4PSIzOTAiIHk9IjM4NSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjUyIiByeD0iNCIgZmlsbD0iIzFlNDBhZiIgb3BhY2l0eT0iMC42Ii8+CiAgICA8IS0tIExhcHRvcCBiYXNlIC0tPgogICAgPHJlY3QgeD0iMjE1IiB5PSI0NTAiIHdpZHRoPSIyOTAiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiMzYTNkNDUiLz4KICAgIDxyZWN0IHg9IjMzMCIgeT0iNDU2IiB3aWR0aD0iNjAiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9IiMyYTJkMzUiLz4KICA8L2c+CiAgPCEtLSBDb2ZmZWUgbXVnIC0tPgogIDxlbGxpcHNlIGN4PSI1NjAiIGN5PSI0NDUiIHJ4PSIyMiIgcnk9IjEwIiBmaWxsPSIjOGI1YTJiIi8+CiAgPHJlY3QgeD0iNTM4IiB5PSIzOTAiIHdpZHRoPSI0NCIgaGVpZ2h0PSI2MCIgcng9IjYiIGZpbGw9IiNlOGUwZDUiLz4KICA8cmVjdCB4PSI1NDAiIHk9IjM5MiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjU2IiByeD0iNSIgZmlsbD0iI2YwZThkZSIvPgogIDxwYXRoIGQ9Ik01ODIgNDA1IFE2MDAgNDEwIDU4MiA0MjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2U4ZTBkNSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFN0ZWFtIC0tPgogIDxwYXRoIGQ9Ik01NTAgMzg1IFE1NTUgMzc1IDU1MCAzNjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M4YzBiMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNiIvPgogIDxwYXRoIGQ9Ik01NjIgMzgyIFE1NjcgMzcwIDU2MiAzNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M4YzBiMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNCIvPgogIDwhLS0gTm90ZWJvb2sgLS0+CiAgPHJlY3QgeD0iODAiIHk9IjQzMCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIyNSIgcng9IjIiIGZpbGw9IiNmNWYwZTgiIHRyYW5zZm9ybT0icm90YXRlKC0zLDgwLDQzMCkiLz4KICA8IS0tIFBlcnNvbiAtLT4KICA8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+CiAgICA8IS0tIEJvZHkgLyBzdWl0IC0tPgogICAgPHBhdGggZD0iTTI5MCAyNjAgUTI2MCAyODAgMjUwIDM4MCBRMjkwIDM5MCAzNjAgMzkwIFE0MzAgMzkwIDQ3MCAzODAgUTQ2MCAyODAgNDMwIDI2MCBaIiBmaWxsPSJ1cmwoI3N1aXQpIi8+CiAgICA8IS0tIFNoaXJ0L2Jsb3VzZSAtLT4KICAgIDxwYXRoIGQ9Ik0zMjAgMjY1IFEzNDAgMjcwIDM2MCAyNjUgUTM4MCAyNzAgNDAwIDI2NSBMMzkwIDM4MCBRMzYwIDM4NSAzMzAgMzgwIFoiIGZpbGw9IiNmMGVjZTUiLz4KICAgIDwhLS0gTGFwZWxzIC0tPgogICAgPHBhdGggZD0iTTMyMCAyNjUgUTMwNSAyODUgMzEwIDM0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWUyODM2IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxwYXRoIGQ9Ik00MDAgMjY1IFE0MTUgMjg1IDQxMCAzNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFlMjgzNiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8IS0tIE5lY2sgLS0+CiAgICA8cmVjdCB4PSIzNDgiIHk9IjIyMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQ4IiByeD0iOCIgZmlsbD0iI2Q0YTU3NCIvPgogICAgPCEtLSBIZWFkIC0tPgogICAgPGVsbGlwc2UgY3g9IjM2MCIgY3k9IjE4NSIgcng9IjUyIiByeT0iNTgiIGZpbGw9IiNkNGE1NzQiLz4KICAgIDwhLS0gSGFpciAtIHByb2Zlc3Npb25hbCB1cGRvIC0tPgogICAgPGVsbGlwc2UgY3g9IjM2MCIgY3k9IjE0OCIgcng9IjUyIiByeT0iMzUiIGZpbGw9IiMzZDI1MTAiLz4KICAgIDxlbGxpcHNlIGN4PSIzNjAiIGN5PSIxMzUiIHJ4PSI0NSIgcnk9IjIyIiBmaWxsPSIjNGEyZTE0Ii8+CiAgICA8IS0tIEJ1biAtLT4KICAgIDxlbGxpcHNlIGN4PSIzNjAiIGN5PSIxMjgiIHJ4PSIyMCIgcnk9IjE1IiBmaWxsPSIjM2QyNTEwIi8+CiAgICA8IS0tIEZhY2UgZmVhdHVyZXMgLS0+CiAgICA8ZWxsaXBzZSBjeD0iMzQyIiBjeT0iMTg4IiByeD0iNyIgcnk9IjkiIGZpbGw9IndoaXRlIi8+CiAgICA8ZWxsaXBzZSBjeD0iMzc4IiBjeT0iMTg4IiByeD0iNyIgcnk9IjkiIGZpbGw9IndoaXRlIi8+CiAgICA8ZWxsaXBzZSBjeD0iMzQzIiBjeT0iMTkwIiByeD0iNSIgcnk9IjYiIGZpbGw9IiM0YTMwMjAiLz4KICAgIDxlbGxpcHNlIGN4PSIzNzkiIGN5PSIxOTAiIHJ4PSI1IiByeT0iNiIgZmlsbD0iIzRhMzAyMCIvPgogICAgPGVsbGlwc2UgY3g9IjM0NCIgY3k9IjE5MSIgcng9IjIuNSIgcnk9IjMiIGZpbGw9IiMxYTBlMDgiLz4KICAgIDxlbGxpcHNlIGN4PSIzODAiIGN5PSIxOTEiIHJ4PSIyLjUiIHJ5PSIzIiBmaWxsPSIjMWEwZTA4Ii8+CiAgICA8IS0tIE5vc2UgLS0+CiAgICA8cGF0aCBkPSJNMzU3IDIwMCBRMzYwIDIwOCAzNjMgMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNiODg0NWEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8IS0tIFNtaWxlIC0tPgogICAgPHBhdGggZD0iTTM0OCAyMTIgUTM2MCAyMjAgMzcyIDIxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjg4NDVhIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPCEtLSBFYXJyaW5ncyAtLT4KICAgIDxjaXJjbGUgY3g9IjMxMCIgY3k9IjE5NSIgcj0iNCIgZmlsbD0iI2M5YTg0YyIvPgogICAgPGNpcmNsZSBjeD0iNDEwIiBjeT0iMTk1IiByPSI0IiBmaWxsPSIjYzlhODRjIi8+CiAgICA8IS0tIEFybXMgLS0+CiAgICA8cGF0aCBkPSJNMjUwIDI4MCBRMjIwIDMyMCAyNDAgMzkwIEwyNjUgMzg1IFEyNTUgMzMwIDI3NSAyOTUgWiIgZmlsbD0idXJsKCNzdWl0KSIvPgogICAgPHBhdGggZD0iTTQ3MCAyODAgUTUwMCAzMjAgNDgwIDM5MCBMNDU1IDM4NSBRNDY1IDMzMCA0NDUgMjk1IFoiIGZpbGw9InVybCgjc3VpdCkiLz4KICAgIDwhLS0gSGFuZHMgLS0+CiAgICA8ZWxsaXBzZSBjeD0iMjQ4IiBjeT0iMzk1IiByeD0iMTgiIHJ5PSIxMiIgZmlsbD0iI2Q0YTU3NCIvPgogICAgPGVsbGlwc2UgY3g9IjQ3MiIgY3k9IjM5NSIgcng9IjE4IiByeT0iMTIiIGZpbGw9IiNkNGE1NzQiLz4KICA8L2c+CiAgPCEtLSBEZWNvcmF0aXZlIHBsYW50IC0tPgogIDxyZWN0IHg9IjgyMCIgeT0iMzIwIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYwIiByeD0iNCIgZmlsbD0iIzhhNmU1MCIvPgogIDxlbGxpcHNlIGN4PSI4MjgiIGN5PSIzMTAiIHJ4PSIzNSIgcnk9IjQwIiBmaWxsPSIjNGE3YTNhIi8+CiAgPGVsbGlwc2UgY3g9IjgwOCIgY3k9IjI5NSIgcng9IjI4IiByeT0iMzIiIGZpbGw9IiM1YThhNDgiLz4KICA8ZWxsaXBzZSBjeD0iODQ4IiBjeT0iMjk1IiByeD0iMjgiIHJ5PSIzMiIgZmlsbD0iIzRhN2EzYSIvPgogIDxlbGxpcHNlIGN4PSI4MjgiIGN5PSIyODAiIHJ4PSIyMiIgcnk9IjI4IiBmaWxsPSIjNWE4YTQ4Ii8+CiAgPCEtLSBMaWdodCBvdmVybGF5IGZvciBkZXB0aCAtLT4KICA8cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjcwMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMDgiLz4KPC9zdmc+" alt="Professional business consultant"/>
+    <div class="hero-card">
+      <div class="hstat"><h4>100%</h4><p>Remote &amp; flexible</p></div>
+      <div class="hstat"><h4>UK Ltd</h4><p>Registered company</p></div>
+      <div class="hstat"><h4>2-in-1</h4><p>Ops + Growth</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="ti"><div class="dot"></div>Registered Ltd Company — England &amp; Wales</div>
+  <div class="ti"><div class="dot"></div>London Based, UK-Wide Remote</div>
+  <div class="ti"><div class="dot"></div>No Long-Term Contracts</div>
+  <div class="ti"><div class="dot"></div>Fast Onboarding</div>
+  <div class="ti"><div class="dot"></div>Results-Driven Approach</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-hdr rev">
+    <div>
+      <div class="sec-eye">What We Do</div>
+      <h2>Two ways we help your<br><em>business thrive</em></h2>
+    </div>
+    <p class="sec-sub" style="max-width:360px;">Whether you need operational support to run smoothly, or a marketing partner to win more customers — we have the solution.</p>
+  </div>
+  <div class="svc-grid rev">
+    <div class="scard">
+      <div class="sico">🖥️</div>
+      <h3>Virtual Assistant Support</h3>
+      <p>Your dedicated remote assistant handling email, diary coordination, travel booking, customer follow-ups, and research — so you can focus on growth.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">🗂️</div>
+      <h3>Business Administration</h3>
+      <p>Professional admin to keep your business organised — document management, data entry, invoice tracking, process creation, and record keeping.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">👥</div>
+      <h3>HR Consultancy</h3>
+      <p>Expert HR for small businesses — employment contracts, staff handbooks, onboarding, disciplinary support, and UK employment law compliance.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">🔍</div>
+      <h3>Recruitment Support</h3>
+      <p>End-to-end hiring assistance — job descriptions, job posting, CV screening, candidate shortlisting, interview scheduling, and offer coordination.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard" style="border-top:3px solid var(--gold);">
+      <div class="sico" style="background:#f5ede0;border-color:#e8d5bc;">📱</div>
+      <h3>Facebook &amp; Instagram Ads</h3>
+      <p>Targeted Meta advertising campaigns that put your business in front of ready-to-buy customers. Full setup, management, optimisation, and monthly reporting.</p>
+      <span class="stag tgrowth">Growth</span>
+    </div>
+    <div class="scard" style="border-top:3px solid var(--gold);">
+      <div class="sico" style="background:#f5ede0;border-color:#e8d5bc;">📈</div>
+      <h3>Social Media Marketing</h3>
+      <p>Strategy, content scheduling, community management, and analytics — a complete done-for-you social presence that builds your brand and drives enquiries.</p>
+      <span class="stag tgrowth">Growth</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-wrap">
+  <div class="about-img">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNTYwIiB2aWV3Qm94PSIwIDAgODAwIDU2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im9iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlZGU2ZGIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGNmYzIiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJvdGFibGUiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYzhhODc4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYTA4MDUwIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ib3dpbiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkOGVlZmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjMGQ4ZjAiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0iZHMiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSI0IiBzdGREZXZpYXRpb249IjgiIGZsb29kLW9wYWNpdHk9IjAuMTIiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI1NjAiIGZpbGw9InVybCgjb2JnKSIvPgogIDwhLS0gQ2VpbGluZyAtLT4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZjBlOGRjIi8+CiAgPCEtLSBCYWNrIHdhbGwgLS0+CiAgPHJlY3QgeT0iMzAiIHdpZHRoPSI4MDAiIGhlaWdodD0iMzQwIiBmaWxsPSIjZWRlNWQ4Ii8+CiAgPCEtLSBXYWxsIHBhbmVscyBkZWNvcmF0aW9uIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI1MCIgd2lkdGg9IjIiIGhlaWdodD0iMzAwIiBmaWxsPSIjZDhkMGM0Ii8+CiAgPHJlY3QgeD0iNzgwIiB5PSI1MCIgd2lkdGg9IjIiIGhlaWdodD0iMzAwIiBmaWxsPSIjZDhkMGM0Ii8+CiAgPCEtLSBMYXJnZSB3aW5kb3dzIC0tPgogIDxyZWN0IHg9IjgwIiB5PSI1MCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyODAiIHJ4PSIzIiBmaWxsPSJ1cmwoI293aW4pIi8+CiAgPHJlY3QgeD0iODAiIHk9IjUwIiB3aWR0aD0iMyIgaGVpZ2h0PSIyODAiIGZpbGw9IiNjMGI4YWMiLz4KICA8cmVjdCB4PSIzMzkiIHk9IjUwIiB3aWR0aD0iMyIgaGVpZ2h0PSIyODAiIGZpbGw9IiNjMGI4YWMiLz4KICA8cmVjdCB4PSI4MCIgeT0iMTg4IiB3aWR0aD0iMjYzIiBoZWlnaHQ9IjMiIGZpbGw9IiNjMGI4YWMiLz4KICA8cmVjdCB4PSIyMDkiIHk9IjUwIiB3aWR0aD0iMyIgaGVpZ2h0PSIyODAiIGZpbGw9IiNjMGI4YWMiIG9wYWNpdHk9IjAuNSIvPgogIDwhLS0gQ2l0eSB2aWV3IHRocm91Z2ggd2luZG93IC0tPgogIDxyZWN0IHg9IjgzIiB5PSI1MyIgd2lkdGg9IjI1NCIgaGVpZ2h0PSIxODUiIGZpbGw9IiNjY2U0ZmYiIG9wYWNpdHk9IjAuNiIvPgogIDxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMzAiIGhlaWdodD0iMTM1IiBmaWxsPSIjYTBiOGQwIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIxNDAiIHk9IjgwIiB3aWR0aD0iMjUiIGhlaWdodD0iMTU1IiBmaWxsPSIjYjBjNGQ4IiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIxNzUiIHk9IjExMCIgd2lkdGg9IjM1IiBoZWlnaHQ9IjEyNSIgZmlsbD0iI2EwYjRjYyIgb3BhY2l0eT0iMC40Ii8+CiAgPHJlY3QgeD0iMjIwIiB5PSI5MCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjE0NSIgZmlsbD0iI2IwYzBkNCIgb3BhY2l0eT0iMC41Ii8+CiAgPHJlY3QgeD0iMjU4IiB5PSIxMjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxMTUiIGZpbGw9IiNhOGJjZDAiIG9wYWNpdHk9IjAuNCIvPgogIDxyZWN0IHg9IjI5MCIgeT0iODUiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNiOGM4ZGMiIG9wYWNpdHk9IjAuNCIvPgogIDwhLS0gV2luZG93IDIgLS0+CiAgPHJlY3QgeD0iNDYwIiB5PSI1MCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyODAiIHJ4PSIzIiBmaWxsPSJ1cmwoI293aW4pIi8+CiAgPHJlY3QgeD0iNDYwIiB5PSI1MCIgd2lkdGg9IjMiIGhlaWdodD0iMjgwIiBmaWxsPSIjYzBiOGFjIi8+CiAgPHJlY3QgeD0iNzE5IiB5PSI1MCIgd2lkdGg9IjMiIGhlaWdodD0iMjgwIiBmaWxsPSIjYzBiOGFjIi8+CiAgPHJlY3QgeD0iNDYwIiB5PSIxODgiIHdpZHRoPSIyNjMiIGhlaWdodD0iMyIgZmlsbD0iI2MwYjhhYyIvPgogIDxyZWN0IHg9IjU5MCIgeT0iNTAiIHdpZHRoPSIzIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI2MwYjhhYyIgb3BhY2l0eT0iMC41Ii8+CiAgPHJlY3QgeD0iNDYzIiB5PSI1MyIgd2lkdGg9IjI1NCIgaGVpZ2h0PSIxODUiIGZpbGw9IiNjY2U0ZmYiIG9wYWNpdHk9IjAuNSIvPgogIDwhLS0gRmxvb3IgLS0+CiAgPHJlY3QgeT0iMzcwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjE5MCIgZmlsbD0iI2M4YmZhZSIvPgogIDxyZWN0IHk9IjM2OCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0IiBmaWxsPSIjYjhiMGEwIi8+CiAgPCEtLSBGbG9vciByZWZsZWN0aW9ucyAtLT4KICA8cmVjdCB5PSIzOTAiIHdpZHRoPSI4MDAiIGhlaWdodD0iMSIgZmlsbD0iI2QwYzhiOCIgb3BhY2l0eT0iMC41Ii8+CiAgPHJlY3QgeT0iNDMwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMGM4YjgiIG9wYWNpdHk9IjAuMyIvPgogIDwhLS0gQ29uZmVyZW5jZSB0YWJsZSAtLT4KICA8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNDQwIiByeD0iMjgwIiByeT0iODAiIGZpbGw9InVybCgjb3RhYmxlKSIgZmlsdGVyPSJ1cmwoI2RzKSIvPgogIDxlbGxpcHNlIGN4PSI0MDAiIGN5PSI0MzUiIHJ4PSIyNzYiIHJ5PSI3NiIgZmlsbD0iI2Q0YTg3MCIvPgogIDxlbGxpcHNlIGN4PSI0MDAiIGN5PSI0MzMiIHJ4PSIyNzAiIHJ5PSI3MiIgZmlsbD0iI2M4YTA2MCIvPgogIDwhLS0gVGFibGUgc3VyZmFjZSBzaGluZSAtLT4KICA8ZWxsaXBzZSBjeD0iMzYwIiBjeT0iNDE4IiByeD0iODAiIHJ5PSIyMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMTUiLz4KICA8IS0tIENoYWlycyBhcm91bmQgdGFibGUgLS0+CiAgPCEtLSBUb3AgY2hhaXJzIC0tPgogIDxnIG9wYWNpdHk9IjAuOSI+CiAgICA8ZWxsaXBzZSBjeD0iMjgwIiBjeT0iMzY4IiByeD0iMjgiIHJ5PSIxMiIgZmlsbD0iI2U4ZTBkNSIvPgogICAgPHJlY3QgeD0iMjU1IiB5PSIzMzAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MiIgcng9IjYiIGZpbGw9IiM0YTU1NjgiLz4KICAgIDxyZWN0IHg9IjI2MCIgeT0iMzM1IiB3aWR0aD0iNDAiIGhlaWdodD0iMzIiIHJ4PSI0IiBmaWxsPSIjNWE2NTc4Ii8+CiAgPC9nPgogIDxnIG9wYWNpdHk9IjAuOSI+CiAgICA8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iMzYyIiByeD0iMjgiIHJ5PSIxMiIgZmlsbD0iI2U4ZTBkNSIvPgogICAgPHJlY3QgeD0iMzc1IiB5PSIzMjQiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MiIgcng9IjYiIGZpbGw9IiM0YTU1NjgiLz4KICAgIDxyZWN0IHg9IjM4MCIgeT0iMzI5IiB3aWR0aD0iNDAiIGhlaWdodD0iMzIiIHJ4PSI0IiBmaWxsPSIjNWE2NTc4Ii8+CiAgPC9nPgogIDxnIG9wYWNpdHk9IjAuOSI+CiAgICA8ZWxsaXBzZSBjeD0iNTIwIiBjeT0iMzY4IiByeD0iMjgiIHJ5PSIxMiIgZmlsbD0iI2U4ZTBkNSIvPgogICAgPHJlY3QgeD0iNDk1IiB5PSIzMzAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MiIgcng9IjYiIGZpbGw9IiM0YTU1NjgiLz4KICAgIDxyZWN0IHg9IjUwMCIgeT0iMzM1IiB3aWR0aD0iNDAiIGhlaWdodD0iMzIiIHJ4PSI0IiBmaWxsPSIjNWE2NTc4Ii8+CiAgPC9nPgogIDwhLS0gUGVvcGxlIGF0IHRhYmxlIChoZWFkcy9zaG91bGRlcnMgdmlzaWJsZSkgLS0+CiAgPCEtLSBQZXJzb24gMSAtLT4KICA8ZWxsaXBzZSBjeD0iMjQwIiBjeT0iMzU1IiByeD0iMjAiIHJ5PSIyMiIgZmlsbD0iI2Q0YTA2MCIvPgogIDxlbGxpcHNlIGN4PSIyNDAiIGN5PSIzMzgiIHJ4PSIyMCIgcnk9IjE0IiBmaWxsPSIjM2QyODEwIi8+CiAgPHJlY3QgeD0iMjE1IiB5PSIzNzUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MCIgcng9IjQiIGZpbGw9IiMyZDRhNmUiLz4KICA8IS0tIFBlcnNvbiAyIC0tPgogIDxlbGxpcHNlIGN4PSI0MDAiIGN5PSIzNDgiIHJ4PSIyMCIgcnk9IjIyIiBmaWxsPSIjZTBjMDkwIi8+CiAgPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjMzMSIgcng9IjIwIiByeT0iMTQiIGZpbGw9IiMyYTE4MDgiLz4KICA8cmVjdCB4PSIzNzUiIHk9IjM2OCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjQwIiByeD0iNCIgZmlsbD0iIzZiNDUzMCIvPgogIDwhLS0gUGVyc29uIDMgLS0+CiAgPGVsbGlwc2UgY3g9IjU2MCIgY3k9IjM1NSIgcng9IjIwIiByeT0iMjIiIGZpbGw9IiNjODkwNjAiLz4KICA8ZWxsaXBzZSBjeD0iNTYwIiBjeT0iMzM4IiByeD0iMjAiIHJ5PSIxNCIgZmlsbD0iIzRhMzAyMCIvPgogIDxyZWN0IHg9IjUzNSIgeT0iMzc1IiB3aWR0aD0iNTAiIGhlaWdodD0iNDAiIHJ4PSI0IiBmaWxsPSIjM2E0ZTJhIi8+CiAgPCEtLSBQYXBlcnMvZGV2aWNlcyBvbiB0YWJsZSAtLT4KICA8cmVjdCB4PSIzMDAiIHk9IjQxNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iMyIgZmlsbD0iI2Y1ZjBlOCIgdHJhbnNmb3JtPSJyb3RhdGUoLTUsIDMwMCwgNDE1KSIvPgogIDxyZWN0IHg9IjM5MCIgeT0iNDEyIiB3aWR0aD0iODAiIGhlaWdodD0iNTAiIHJ4PSI1IiBmaWxsPSIjMWExZDI0Ii8+CiAgPHJlY3QgeD0iMzk0IiB5PSI0MTYiIHdpZHRoPSI3MiIgaGVpZ2h0PSI0MiIgcng9IjMiIGZpbGw9IiMyNTYzZWIiIG9wYWNpdHk9IjAuNiIvPgogIDxyZWN0IHg9IjQ1MCIgeT0iNDIwIiB3aWR0aD0iNTUiIGhlaWdodD0iMzUiIHJ4PSIzIiBmaWxsPSIjZjVmMGU4IiB0cmFuc2Zvcm09InJvdGF0ZSg0LCA0NTAsIDQyMCkiLz4KICA8IS0tIFBsYW50IGluIGNvcm5lciAtLT4KICA8cmVjdCB4PSI3MzAiIHk9IjI1MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjEyMCIgcng9IjMiIGZpbGw9IiM3YTVlNDIiLz4KICA8ZWxsaXBzZSBjeD0iNzM3IiBjeT0iMjQ0IiByeD0iMzAiIHJ5PSIzNCIgZmlsbD0iIzNkNmIzMCIvPgogIDxlbGxpcHNlIGN4PSI3MjAiIGN5PSIyMzIiIHJ4PSIyNCIgcnk9IjI4IiBmaWxsPSIjNGE3YTNhIi8+CiAgPGVsbGlwc2UgY3g9Ijc1NCIgY3k9IjIzMiIgcng9IjI0IiByeT0iMjgiIGZpbGw9IiMzZDZiMzAiLz4KICA8cmVjdCB4PSI3MTgiIHk9IjM1MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iIzVhNGEzOCIvPgogIDwhLS0gQ2VpbGluZyBsaWdodHMgLS0+CiAgPHJlY3QgeD0iMTgwIiB5PSIwIiB3aWR0aD0iODAiIGhlaWdodD0iOCIgcng9IjIiIGZpbGw9IiNmOGY0ZWUiIG9wYWNpdHk9IjAuOCIvPgogIDxyZWN0IHg9IjU0MCIgeT0iMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgiIHJ4PSIyIiBmaWxsPSIjZjhmNGVlIiBvcGFjaXR5PSIwLjgiLz4KPC9zdmc+" alt="Professional team in a modern office"/>
+  </div>
+  <div class="about-txt rev">
+    <div class="sec-eye">About HOI</div>
+    <h2>Your dedicated<br><em>remote partner</em></h2>
+    <p class="sec-sub">Founded to give small businesses access to professional support — without the cost of full-time staff. We understand real business challenges and tailor everything to your needs.</p>
+    <div class="divline"></div>
+    <div class="apts">
+      <div class="apt">
+        <div class="apt-ico">💼</div>
+        <div>
+          <h4>Business Management Experience</h4>
+          <p>Proven track record across business operations, HR, and administration in multiple UK sectors.</p>
+        </div>
+      </div>
+      <div class="apt">
+        <div class="apt-ico">👥</div>
+        <div>
+          <h4>Recruitment &amp; HR Expertise</h4>
+          <p>Deep knowledge of talent acquisition, people management, and UK employment law compliance.</p>
+        </div>
+      </div>
+      <div class="apt">
+        <div class="apt-ico">📱</div>
+        <div>
+          <h4>Digital Marketing Capabilities</h4>
+          <p>Meta advertising and social media strategy to generate real leads and measurable growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-grid">
+    <div class="how-img rev">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDgwIiB2aWV3Qm94PSIwIDAgODAwIDQ4MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlZGU2ZGEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGQ0YzQiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJjdGFibGUiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYzBhMDcwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOTA2YTQwIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9ImNzIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMyIgc3RkRGV2aWF0aW9uPSI2IiBmbG9vZC1vcGFjaXR5PSIwLjEiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjY2JnKSIvPgogIDwhLS0gV2FsbCBkaXZpZGVyIC0tPgogIDxyZWN0IHg9IjM1MCIgeT0iMCIgd2lkdGg9IjMiIGhlaWdodD0iMzUwIiBmaWxsPSIjZDRjY2JlIiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIExlZnQgd2FsbCAtLT4KICA8cmVjdCB3aWR0aD0iMzUzIiBoZWlnaHQ9IjM1MCIgZmlsbD0iI2VkZThkZSIvPgogIDwhLS0gUmlnaHQgd2FsbCBsaWdodGVyIC0tPgogIDxyZWN0IHg9IjM1MyIgd2lkdGg9IjQ0NyIgaGVpZ2h0PSIzNTAiIGZpbGw9IiNmMmVjZTAiLz4KICA8IS0tIEJvb2tzaGVsZiBzdWdnZXN0aW9uIGxlZnQgLS0+CiAgPHJlY3QgeD0iMjAiIHk9IjMwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwMCIgcng9IjIiIGZpbGw9IiNkNGM4YjgiLz4KICA8cmVjdCB4PSIyNCIgeT0iMzQiIHdpZHRoPSIxMTIiIGhlaWdodD0iOCIgZmlsbD0iIzhhNjg0MCIvPgogIDxyZWN0IHg9IjI0IiB5PSI1MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjcwIiByeD0iMSIgZmlsbD0iI2MwNTAzMCIvPgogIDxyZWN0IHg9IjU4IiB5PSI1MCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjcwIiByeD0iMSIgZmlsbD0iIzIwNjBhMCIvPgogIDxyZWN0IHg9Ijg3IiB5PSI1MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjcwIiByeD0iMSIgZmlsbD0iIzQwODAzMCIvPgogIDxyZWN0IHg9IjExMSIgeT0iNTAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI3MCIgcng9IjEiIGZpbGw9IiM4MDYwMjAiLz4KICA8cmVjdCB4PSIyNCIgeT0iMTI4IiB3aWR0aD0iOCIgaGVpZ2h0PSI1NSIgcng9IjEiIGZpbGw9IiNhMDQwMjAiLz4KICA8cmVjdCB4PSIzNiIgeT0iMTI4IiB3aWR0aD0iOCIgaGVpZ2h0PSI1NSIgcng9IjEiIGZpbGw9IiMyMDUwYTAiLz4KICA8cmVjdCB4PSI0OCIgeT0iMTI4IiB3aWR0aD0iOCIgaGVpZ2h0PSI1NSIgcng9IjEiIGZpbGw9IiMzMDgwNDAiLz4KICA8cmVjdCB4PSIyNCIgeT0iMTkyIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjQiIGZpbGw9IiM4YTY4NDAiLz4KICA8IS0tIEZyYW1lIG9uIHJpZ2h0IHdhbGwgLS0+CiAgPHJlY3QgeD0iNTgwIiB5PSI0MCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSIxMDAiIHJ4PSIzIiBmaWxsPSIjZDRjOGI4Ii8+CiAgPHJlY3QgeD0iNTg1IiB5PSI0NSIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5MCIgcng9IjIiIGZpbGw9IiNjOGJmYjAiLz4KICA8cmVjdCB4PSI1OTAiIHk9IjUwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjgwIiByeD0iMiIgZmlsbD0iI2U4ZTBkMCIvPgogIDwhLS0gQWJzdHJhY3QgYXJ0IGluIGZyYW1lIC0tPgogIDxjaXJjbGUgY3g9IjY0MCIgY3k9IjgyIiByPSIyNSIgZmlsbD0iI2I4OTY2YSIgb3BhY2l0eT0iMC41Ii8+CiAgPGNpcmNsZSBjeD0iNjY1IiBjeT0iNzIiIHI9IjE4IiBmaWxsPSIjMmQ0YTZlIiBvcGFjaXR5PSIwLjQiLz4KICA8IS0tIEZsb29yIC0tPgogIDxyZWN0IHk9IjM1MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSIxMzAiIGZpbGw9IiNjNGI4YTQiLz4KICA8cmVjdCB5PSIzNDgiIHdpZHRoPSI4MDAiIGhlaWdodD0iNCIgZmlsbD0iI2IwYTg5OCIvPgogIDwhLS0gVGFibGUgLS0+CiAgPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjM5MCIgcng9IjIwMCIgcnk9IjU1IiBmaWxsPSJ1cmwoI2N0YWJsZSkiIGZpbHRlcj0idXJsKCNjcykiLz4KICA8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iMzg1IiByeD0iMTk2IiByeT0iNTEiIGZpbGw9IiNjOGE4NzAiLz4KICA8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iMzgzIiByeD0iMTkwIiByeT0iNDciIGZpbGw9IiNiY2EwNjAiLz4KICA8IS0tIFRhYmxlIGxlZyAtLT4KICA8cmVjdCB4PSIzODgiIHk9IjQyMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYwIiBmaWxsPSIjOTA2YTQwIi8+CiAgPCEtLSBQZXJzb24gMSAtIGxlZnQsIHByb2Zlc3Npb25hbCB3b21hbiAtLT4KICA8ZyBmaWx0ZXI9InVybCgjY3MpIj4KICAgIDwhLS0gQm9keSAtLT4KICAgIDxwYXRoIGQ9Ik0xNzUgMjAwIFExNDggMjE4IDE0MCAzNDAgUTE3MCAzNDggMjIwIDM0OCBRMjcwIDM0OCAzMDAgMzQwIFEyOTIgMjE4IDI2NSAyMDAgWiIgZmlsbD0iIzJkNGE2ZSIvPgogICAgPCEtLSBCbG91c2UgLS0+CiAgICA8cGF0aCBkPSJNMjAwIDIwNSBRMjIwIDIxMCAyNDAgMjA1IFEyNTUgMjE4IDI1MCAzNDAgUTIyMCAzNDUgMTkwIDM0MCBaIiBmaWxsPSIjZThlNGRjIi8+CiAgICA8IS0tIE5lY2sgLS0+CiAgICA8cmVjdCB4PSIyMTAiIHk9IjE2OCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjM4IiByeD0iOCIgZmlsbD0iI2Q0YTA2MCIvPgogICAgPCEtLSBIZWFkIC0tPgogICAgPGVsbGlwc2UgY3g9IjIyMCIgY3k9IjE0MiIgcng9IjQ0IiByeT0iNTAiIGZpbGw9IiNkNGEwNjAiLz4KICAgIDwhLS0gSGFpciAtLT4KICAgIDxlbGxpcHNlIGN4PSIyMjAiIGN5PSIxMDgiIHJ4PSI0NCIgcnk9IjMwIiBmaWxsPSIjMmExODA4Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMjIwIiBjeT0iOTgiIHJ4PSIzOCIgcnk9IjIwIiBmaWxsPSIjM2EyMDEwIi8+CiAgICA8cGF0aCBkPSJNMTc4IDEyMCBRMTc1IDE2MCAxODAgMjAwIiBmaWxsPSIjMmExODA4IiBzdHJva2U9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0yNjIgMTIwIFEyNjUgMTYwIDI2MCAyMDAiIGZpbGw9IiMyYTE4MDgiIHN0cm9rZT0ibm9uZSIvPgogICAgPCEtLSBGYWNlIC0tPgogICAgPGVsbGlwc2UgY3g9IjIwOCIgY3k9IjE0NiIgcng9IjYiIHJ5PSI3IiBmaWxsPSJ3aGl0ZSIvPgogICAgPGVsbGlwc2UgY3g9IjIzMiIgY3k9IjE0NiIgcng9IjYiIHJ5PSI3IiBmaWxsPSJ3aGl0ZSIvPgogICAgPGVsbGlwc2UgY3g9IjIwOSIgY3k9IjE0NyIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjM2QyMDEwIi8+CiAgICA8ZWxsaXBzZSBjeD0iMjMzIiBjeT0iMTQ3IiByeD0iNCIgcnk9IjUiIGZpbGw9IiMzZDIwMTAiLz4KICAgIDxwYXRoIGQ9Ik0yMTIgMTYwIFEyMjAgMTY2IDIyOCAxNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2IwNzg0MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPCEtLSBFYXJyaW5ncyAtLT4KICAgIDxjaXJjbGUgY3g9IjE3OCIgY3k9IjE1MiIgcj0iMyIgZmlsbD0iI2M5YTg0YyIvPgogICAgPCEtLSBBcm1zIC0tPgogICAgPHBhdGggZD0iTTE0MCAyMzAgUTEyMCAyNjUgMTMyIDM0MCBMMTU0IDMzNiBRMTQ4IDI3MCAxNjggMjQyIFoiIGZpbGw9IiMyZDRhNmUiLz4KICAgIDxwYXRoIGQ9Ik0zMDAgMjMwIFEzMjAgMjY1IDMwOCAzNDAgTDI4NiAzMzYgUTI5MiAyNzAgMjcyIDI0MiBaIiBmaWxsPSIjMmQ0YTZlIi8+CiAgICA8IS0tIEhhbmRzIG9uIHRhYmxlIC0tPgogICAgPGVsbGlwc2UgY3g9IjEzNiIgY3k9IjM0NCIgcng9IjE2IiByeT0iMTAiIGZpbGw9IiNkNGEwNjAiLz4KICAgIDxlbGxpcHNlIGN4PSIzMDQiIGN5PSIzNDQiIHJ4PSIxNiIgcnk9IjEwIiBmaWxsPSIjZDRhMDYwIi8+CiAgPC9nPgogIDwhLS0gUGVyc29uIDIgLSByaWdodCwgcHJvZmVzc2lvbmFsIG1hbiAtLT4KICA8ZyBmaWx0ZXI9InVybCgjY3MpIj4KICAgIDxwYXRoIGQ9Ik01MDAgMjAwIFE0NzMgMjE4IDQ2NSAzNDAgUTQ5NSAzNDggNTQ1IDM0OCBRNTk1IDM0OCA2MjUgMzQwIFE2MTcgMjE4IDU5MCAyMDAgWiIgZmlsbD0iIzVhMzUyMCIvPgogICAgPHBhdGggZD0iTTUyNSAyMDUgUTU0NSAyMTAgNTY1IDIwNSBRNTgwIDIxOCA1NzUgMzQwIFE1NDUgMzQ1IDUxNSAzNDAgWiIgZmlsbD0iI2YwZWNlNCIvPgogICAgPHJlY3QgeD0iNTM1IiB5PSIxNjgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIzOCIgcng9IjgiIGZpbGw9IiNlMGMwOTAiLz4KICAgIDxlbGxpcHNlIGN4PSI1NDUiIGN5PSIxNDIiIHJ4PSI0NCIgcnk9IjUwIiBmaWxsPSIjZTBjMDkwIi8+CiAgICA8ZWxsaXBzZSBjeD0iNTQ1IiBjeT0iMTA4IiByeD0iNDQiIHJ5PSIzMCIgZmlsbD0iIzFlMTAwOCIvPgogICAgPGVsbGlwc2UgY3g9IjU0NSIgY3k9Ijk4IiByeD0iMzgiIHJ5PSIxOCIgZmlsbD0iIzJhMTgwOCIvPgogICAgPGVsbGlwc2UgY3g9IjUzMyIgY3k9IjE0NiIgcng9IjYiIHJ5PSI3IiBmaWxsPSJ3aGl0ZSIvPgogICAgPGVsbGlwc2UgY3g9IjU1NyIgY3k9IjE0NiIgcng9IjYiIHJ5PSI3IiBmaWxsPSJ3aGl0ZSIvPgogICAgPGVsbGlwc2UgY3g9IjUzNCIgY3k9IjE0NyIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjMWUwZTA4Ii8+CiAgICA8ZWxsaXBzZSBjeD0iNTU4IiBjeT0iMTQ3IiByeD0iNCIgcnk9IjUiIGZpbGw9IiMxZTBlMDgiLz4KICAgIDxwYXRoIGQ9Ik01MzcgMTYwIFE1NDUgMTY3IDU1MyAxNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2IwODA1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTQ2NSAyMzAgUTQ0NSAyNjUgNDU3IDM0MCBMNDc5IDMzNiBRNDczIDI3MCA0OTMgMjQyIFoiIGZpbGw9IiM1YTM1MjAiLz4KICAgIDxwYXRoIGQ9Ik02MjUgMjMwIFE2NDUgMjY1IDYzMyAzNDAgTDYxMSAzMzYgUTYxNyAyNzAgNTk3IDI0MiBaIiBmaWxsPSIjNWEzNTIwIi8+CiAgICA8ZWxsaXBzZSBjeD0iNDYxIiBjeT0iMzQ0IiByeD0iMTYiIHJ5PSIxMCIgZmlsbD0iI2UwYzA5MCIvPgogICAgPGVsbGlwc2UgY3g9IjYyOSIgY3k9IjM0NCIgcng9IjE2IiByeT0iMTAiIGZpbGw9IiNlMGMwOTAiLz4KICA8L2c+CiAgPCEtLSBEb2N1bWVudHMgb24gdGFibGUgLS0+CiAgPHJlY3QgeD0iMzMwIiB5PSIzNDgiIHdpZHRoPSI4MCIgaGVpZ2h0PSI1NSIgcng9IjIiIGZpbGw9IiNmNWYwZTgiIHRyYW5zZm9ybT0icm90YXRlKC00LDMzMCwzNDgpIi8+CiAgPHJlY3QgeD0iMzM1IiB5PSIzNTMiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0IiByeD0iMSIgZmlsbD0iI2QwYzhiOCIvPgogIDxyZWN0IHg9IjMzNSIgeT0iMzYyIiB3aWR0aD0iNjAiIGhlaWdodD0iMyIgcng9IjEiIGZpbGw9IiNkMGM4YjgiLz4KICA8cmVjdCB4PSIzMzUiIHk9IjM3MCIgd2lkdGg9IjY1IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjZDBjOGI4Ii8+CiAgPHJlY3QgeD0iMzM1IiB5PSIzNzgiIHdpZHRoPSI1MCIgaGVpZ2h0PSIzIiByeD0iMSIgZmlsbD0iI2QwYzhiOCIvPgogIDwhLS0gUGVuIC0tPgogIDxyZWN0IHg9IjQyNSIgeT0iMzU1IiB3aWR0aD0iNCIgaGVpZ2h0PSI1MCIgcng9IjIiIGZpbGw9IiNjOWE4NGMiIHRyYW5zZm9ybT0icm90YXRlKDE1LDQyNSwzNTUpIi8+CiAgPCEtLSBDb2ZmZWUgY3VwcyAtLT4KICA8cmVjdCB4PSIyNzAiIHk9IjM0NSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iI2YwZThkZSIvPgogIDxlbGxpcHNlIGN4PSIyODQiIGN5PSIzNDUiIHJ4PSIxNCIgcnk9IjUiIGZpbGw9IiM4YTYwNDAiLz4KICA8cmVjdCB4PSI0OTAiIHk9IjM0NSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iI2YwZThkZSIvPgogIDxlbGxpcHNlIGN4PSI1MDQiIGN5PSIzNDUiIHJ4PSIxNCIgcnk9IjUiIGZpbGw9IiM4YTYwNDAiLz4KPC9zdmc+" alt="Business consultation"/>
+      <div class="how-badge">
+        <p>"Professional, responsive, and genuinely invested in our success."</p>
+        <span>London Small Business Owner</span>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="sec-eye">The Process</div>
+      <h2>Simple to start,<br><em>built to last.</em></h2>
+      <p class="sec-sub">No complicated processes, no long-term lock-ins. We make it straightforward to get the support your business needs.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="snum">01</div>
+          <div class="sbody"><h3>Free Consultation Call</h3><p>A 30-minute call to understand your business, challenges, and exactly what support will make the biggest difference.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">02</div>
+          <div class="sbody"><h3>Tailored Proposal</h3><p>We put together a custom plan — services, scope, and pricing — designed specifically around your business and budget.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">03</div>
+          <div class="sbody"><h3>Quick Onboarding</h3><p>We get started fast with a smooth, simple onboarding. No lengthy delays — results from day one.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">04</div>
+          <div class="sbody"><h3>Your Business Grows</h3><p>With the day-to-day handled and new customers coming in, you focus entirely on growth.</p></div>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-dark" style="margin-top:2rem;">Get Started Today →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section id="who" style="background:var(--cream);">
+  <div class="rev" style="text-align:center;max-width:560px;margin:0 auto;">
+    <div class="sec-eye" style="justify-content:center;">Who We Help</div>
+    <h2>Built for <em>ambitious businesses</em></h2>
+    <p class="sec-sub" style="margin:0 auto;">We work with business owners who are ready to delegate, scale, and grow.</p>
+  </div>
+  <div class="who-grid rev">
+    <div class="wcard">
+      <div class="wcard-img"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNDAwIDE4MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmMGVjZTQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNGRkZDAiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0idXJsKCNzYmcpIi8+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIxMTAiIGZpbGw9IiNlZGU4ZGUiLz4KICA8IS0tIERlc2sgLS0+CiAgPHJlY3QgeD0iMjAiIHk9IjEwMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxMiIgcng9IjIiIGZpbGw9IiNiODk4NzAiLz4KICA8cmVjdCB4PSIyMCIgeT0iMTEwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjYTA4MDYwIi8+CiAgPCEtLSBNb25pdG9ycyAtLT4KICA8cmVjdCB4PSI1MCIgeT0iNTUiIHdpZHRoPSI5MCIgaGVpZ2h0PSI1MCIgcng9IjQiIGZpbGw9IiMxYTFkMjQiLz4KICA8cmVjdCB4PSI1NCIgeT0iNTkiIHdpZHRoPSI4MiIgaGVpZ2h0PSI0MiIgcng9IjMiIGZpbGw9IiMyNTYzZWIiIG9wYWNpdHk9IjAuNyIvPgogIDxyZWN0IHg9Ijg1IiB5PSIxMDUiIHdpZHRoPSIyMiIgaGVpZ2h0PSI4IiByeD0iMiIgZmlsbD0iIzJhMmQzNSIvPgogIDxyZWN0IHg9IjE3MCIgeT0iNTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNTUiIHJ4PSI0IiBmaWxsPSIjMWExZDI0Ii8+CiAgPHJlY3QgeD0iMTc0IiB5PSI1NCIgd2lkdGg9IjkyIiBoZWlnaHQ9IjQ3IiByeD0iMyIgZmlsbD0iIzFlNDBhZiIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMjE1IiB5PSIxMDUiIHdpZHRoPSIyMiIgaGVpZ2h0PSI4IiByeD0iMiIgZmlsbD0iIzJhMmQzNSIvPgogIDxyZWN0IHg9IjI5MCIgeT0iNjAiIHdpZHRoPSI3NSIgaGVpZ2h0PSI0MiIgcng9IjQiIGZpbGw9IiMxYTFkMjQiLz4KICA8cmVjdCB4PSIyOTQiIHk9IjY0IiB3aWR0aD0iNjciIGhlaWdodD0iMzQiIHJ4PSIzIiBmaWxsPSIjNjM2NmYxIiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIFBsYW50cyAtLT4KICA8cmVjdCB4PSIzNjAiIHk9IjY1IiB3aWR0aD0iOCIgaGVpZ2h0PSIzOCIgcng9IjIiIGZpbGw9IiM3YTVlNDIiLz4KICA8ZWxsaXBzZSBjeD0iMzY0IiBjeT0iNjAiIHJ4PSIxOCIgcnk9IjIwIiBmaWxsPSIjM2Q2YjMwIi8+CiAgPGVsbGlwc2UgY3g9IjM1MiIgY3k9IjUzIiByeD0iMTQiIHJ5PSIxNiIgZmlsbD0iIzRhN2EzYSIvPgogIDwhLS0gQ29mZmVlIC0tPgogIDxyZWN0IHg9IjEzMCIgeT0iODgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgcng9IjMiIGZpbGw9IiNmMGU4ZGUiLz4KICA8ZWxsaXBzZSBjeD0iMTQwIiBjeT0iODgiIHJ4PSIxMCIgcnk9IjQiIGZpbGw9IiM3YTQ4MjAiLz4KICA8IS0tIEZsb29yIC0tPgogIDxyZWN0IHk9IjEzMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2M4YmZhZSIvPgo8L3N2Zz4=" alt="Startup office"/></div>
+      <div class="wcard-body"><h3>Startups &amp; SMEs</h3><p>Get professional support from day one without the overhead of full-time hires.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNDAwIDE4MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNsYmciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjBmNGY4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTRlZWY1Ii8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIxODAiIGZpbGw9InVybCgjY2xiZykiLz4KICA8IS0tIENsZWFuIHdhbGxzIC0tPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjZjVmOGZiIi8+CiAgPCEtLSBSZWNlcHRpb24gZGVzayAtLT4KICA8cmVjdCB4PSIyMCIgeT0iMTAwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjYwIiByeD0iNCIgZmlsbD0iI2U4ZjBmOCIvPgogIDxyZWN0IHg9IjIwIiB5PSIxMDAiIHdpZHRoPSIyODAiIGhlaWdodD0iMTIiIHJ4PSI0IiBmaWxsPSIjZDhlOGY1Ii8+CiAgPCEtLSBQZXJzb24gYXQgcmVjZXB0aW9uIC0tPgogIDxlbGxpcHNlIGN4PSIxNTAiIGN5PSI4NSIgcng9IjE4IiByeT0iMjAiIGZpbGw9IiNkNGEwNjAiLz4KICA8ZWxsaXBzZSBjeD0iMTUwIiBjeT0iNjgiIHJ4PSIxOCIgcnk9IjEyIiBmaWxsPSIjM2EyODEwIi8+CiAgPHJlY3QgeD0iMTI4IiB5PSIxMDMiIHdpZHRoPSI0NCIgaGVpZ2h0PSIzNSIgcng9IjMiIGZpbGw9IndoaXRlIi8+CiAgPCEtLSBSZWQgY3Jvc3Mgc3ltYm9sIC0tPgogIDxyZWN0IHg9IjMyMCIgeT0iMjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI0OCIgcng9IjMiIGZpbGw9IiNlMDMwMzAiLz4KICA8cmVjdCB4PSIzMDQiIHk9IjM0IiB3aWR0aD0iNDgiIGhlaWdodD0iMTYiIHJ4PSIzIiBmaWxsPSIjZTAzMDMwIi8+CiAgPCEtLSBNZWRpY2FsIGl0ZW1zIG9uIGRlc2sgLS0+CiAgPHJlY3QgeD0iNDAiIHk9IjkwIiB3aWR0aD0iNDAiIGhlaWdodD0iMTQiIHJ4PSIyIiBmaWxsPSJ3aGl0ZSIvPgogIDxyZWN0IHg9IjkwIiB5PSI4NSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE4IiByeD0iNiIgZmlsbD0iI2M4ZTBmOCIvPgogIDwhLS0gRmxvb3IgLS0+CiAgPHJlY3QgeT0iMTIwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZThlZmY4Ii8+CiAgPGxpbmUgeDE9IjAiIHkxPSIxNTAiIHgyPSI0MDAiIHkyPSIxNTAiIHN0cm9rZT0iI2Q4ZThmOCIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==" alt="Aesthetic clinic"/></div>
+      <div class="wcard-body"><h3>Aesthetic Clinics &amp; Med Spas</h3><p>HR compliance and paid social campaigns that keep your appointment books full.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNDAwIDE4MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNiY2Q4ZjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGVhZjgiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0idXJsKCNza3kpIi8+CiAgPCEtLSBDbG91ZHMgLS0+CiAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMzAiIHJ4PSI0MCIgcnk9IjE1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ii8+CiAgPGVsbGlwc2UgY3g9IjExMCIgY3k9IjI1IiByeD0iMzAiIHJ5PSIxOCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxlbGxpcHNlIGN4PSIzMDAiIGN5PSI0MCIgcng9IjM1IiByeT0iMTIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciLz4KICA8IS0tIEdyb3VuZCAtLT4KICA8cmVjdCB5PSIxNDUiIHdpZHRoPSI0MDAiIGhlaWdodD0iMzUiIGZpbGw9IiM4YWIwNjAiLz4KICA8cmVjdCB5PSIxNDMiIHdpZHRoPSI0MDAiIGhlaWdodD0iNSIgZmlsbD0iIzcwYTA0OCIvPgogIDwhLS0gSG91c2UgMSAobGVmdCkgLS0+CiAgPHJlY3QgeD0iNDAiIHk9IjcwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjYzhiZmIwIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzMCw3MCA5MCwzMCAxNTAsNzAiIGZpbGw9IiM4YTYwNTAiLz4KICA8cmVjdCB4PSI2MCIgeT0iOTAiIHdpZHRoPSIyNSIgaGVpZ2h0PSIzMCIgZmlsbD0iI2EwYzRlMCIvPgogIDxyZWN0IHg9IjEwNSIgeT0iOTAiIHdpZHRoPSIyNSIgaGVpZ2h0PSIzMCIgZmlsbD0iI2EwYzRlMCIvPgogIDxyZWN0IHg9Ijc4IiB5PSIxMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzdhNTA0MCIgcng9IjIiLz4KICA8IS0tIE1haW4gaG91c2UgY2VudGVyIC0tPgogIDxyZWN0IHg9IjE2MCIgeT0iNTAiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZDRjOGI4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNDgsNTAgMjI1LDUgMjkyLDUwIiBmaWxsPSIjYTA3MDYwIi8+CiAgPHJlY3QgeD0iMTc1IiB5PSI3MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiBmaWxsPSIjYThjOGUwIiByeD0iMiIvPgogIDxyZWN0IHg9IjIzNSIgeT0iNzAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzNSIgZmlsbD0iI2E4YzhlMCIgcng9IjIiLz4KICA8cmVjdCB4PSIyMDUiIHk9IjEwNSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjQ1IiBmaWxsPSIjOGE2MDUwIiByeD0iMiIvPgogIDwhLS0gSG91c2UgMyAocmlnaHQpIC0tPgogIDxyZWN0IHg9IjMwMCIgeT0iNzUiIHdpZHRoPSI5MCIgaGVpZ2h0PSI3NSIgZmlsbD0iI2MwYjhhOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMjkyLDc1IDM0NSwzOCAzOTgsNzUiIGZpbGw9IiM5MDY4NTgiLz4KICA8cmVjdCB4PSIzMTUiIHk9IjkzIiB3aWR0aD0iMjIiIGhlaWdodD0iMjgiIGZpbGw9IiNhMGM0ZTAiLz4KICA8cmVjdCB4PSIzNDgiIHk9IjkzIiB3aWR0aD0iMjIiIGhlaWdodD0iMjgiIGZpbGw9IiNhMGM0ZTAiLz4KICA8cmVjdCB4PSIzMzAiIHk9IjExMiIgd2lkdGg9IjIyIiBoZWlnaHQ9IjM4IiBmaWxsPSIjN2E1MDQwIiByeD0iMiIvPgogIDwhLS0gUGF0aCAtLT4KICA8cGF0aCBkPSJNMjEwIDE1MCBRMjE1IDE2MCAyMjAgMTgwIiBzdHJva2U9IiNiOGE4ODgiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRm9yIHNhbGUgc2lnbiAtLT4KICA8cmVjdCB4PSIyNzAiIHk9IjEwNSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjE4IiByeD0iMiIgZmlsbD0iI2M5YTg0YyIvPgogIDxyZWN0IHg9IjI4MyIgeT0iMTA1IiB3aWR0aD0iMyIgaGVpZ2h0PSIzMCIgZmlsbD0iIzhhNjg0MCIvPgogIDxyZWN0IHg9IjI3MiIgeT0iMTA4IiB3aWR0aD0iMjQiIGhlaWdodD0iMyIgcng9IjEiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjgiLz4KICA8cmVjdCB4PSIyNzIiIHk9IjExNCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ii8+Cjwvc3ZnPg==" alt="Estate agent"/></div>
+      <div class="wcard-body"><h3>Estate Agents &amp; Property</h3><p>Lead generation and operational support for London property professionals.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgNDAwIDE4MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyNTI4MzAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYTFkMjQiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0idXJsKCNnYmcpIi8+CiAgPCEtLSBGbG9vciAtLT4KICA8cmVjdCB5PSIxNDAiIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAiIGZpbGw9IiMyYTJkMzgiLz4KICA8bGluZSB4MT0iMCIgeTE9IjE0MCIgeDI9IjQwMCIgeTI9IjE0MCIgc3Ryb2tlPSIjYjg5NjZhIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8IS0tIE1vdGl2YXRpb25hbCBzdHJpcGUgLS0+CiAgPHJlY3QgeT0iNjAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMyIgZmlsbD0iI2I4OTY2YSIgb3BhY2l0eT0iMC40Ii8+CiAgPCEtLSBEdW1iYmVsbHMgLS0+CiAgPGcgZmlsbD0iIzNhM2Q0OCIgc3Ryb2tlPSIjNGE0ZDU4IiBzdHJva2Utd2lkdGg9IjEiPgogICAgPCEtLSBEdW1iYmVsbCAxIC0tPgogICAgPGVsbGlwc2UgY3g9IjYwIiBjeT0iMTEwIiByeD0iMTgiIHJ5PSIyMiIgZmlsbD0iIzRhNGQ1OCIvPgogICAgPHJlY3QgeD0iNzUiIHk9IjEwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzNhM2Q0OCIvPgogICAgPGVsbGlwc2UgY3g9IjExOCIgY3k9IjExMCIgcng9IjE4IiByeT0iMjIiIGZpbGw9IiM0YTRkNTgiLz4KICAgIDwhLS0gRHVtYmJlbGwgMiAtLT4KICAgIDxlbGxpcHNlIGN4PSIxODUiIGN5PSIxMDgiIHJ4PSIxNiIgcnk9IjE5IiBmaWxsPSIjNGE0ZDU4Ii8+CiAgICA8cmVjdCB4PSIxOTkiIHk9Ijk5IiB3aWR0aD0iMzUiIGhlaWdodD0iMTgiIHJ4PSIzIiBmaWxsPSIjM2EzZDQ4Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMjM3IiBjeT0iMTA4IiByeD0iMTYiIHJ5PSIxOSIgZmlsbD0iIzRhNGQ1OCIvPgogICAgPCEtLSBCYXJiZWxsIC0tPgogICAgPHJlY3QgeD0iMjgwIiB5PSIxMDQiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjM2EzZDQ4Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMjgwIiBjeT0iMTEwIiByeD0iMTQiIHJ5PSIxOCIgZmlsbD0iIzRhNGQ1OCIvPgogICAgPGVsbGlwc2UgY3g9IjM4MCIgY3k9IjExMCIgcng9IjE0IiByeT0iMTgiIGZpbGw9IiM0YTRkNTgiLz4KICAgIDxlbGxpcHNlIGN4PSIyOTUiIGN5PSIxMTAiIHJ4PSIxMCIgcnk9IjEzIiBmaWxsPSIjNTU1ODY4Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMzY1IiBjeT0iMTEwIiByeD0iMTAiIHJ5PSIxMyIgZmlsbD0iIzU1NTg2OCIvPgogIDwvZz4KICA8IS0tIFBlcnNvbiBleGVyY2lzaW5nIChzaWxob3VldHRlKSAtLT4KICA8ZyBmaWxsPSIjYjg5NjZhIiBvcGFjaXR5PSIwLjg1Ij4KICAgIDxlbGxpcHNlIGN4PSIzMjAiIGN5PSIzOCIgcng9IjE0IiByeT0iMTYiLz4KICAgIDwhLS0gQm9keSBob2xkaW5nIHdlaWdodHMgdXAgLS0+CiAgICA8cmVjdCB4PSIzMDgiIHk9IjUyIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiIHJ4PSI0Ii8+CiAgICA8IS0tIEFybXMgcmFpc2VkIC0tPgogICAgPHJlY3QgeD0iMjg1IiB5PSIzMCIgd2lkdGg9IjI2IiBoZWlnaHQ9IjEyIiByeD0iNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwLDI4NSwzMCkiLz4KICAgIDxyZWN0IHg9IjMzMyIgeT0iMjgiIHdpZHRoPSIyNiIgaGVpZ2h0PSIxMiIgcng9IjQiIHRyYW5zZm9ybT0icm90YXRlKDMwLDM0NSwyOCkiLz4KICAgIDwhLS0gTGVncyAtLT4KICAgIDxyZWN0IHg9IjMwOCIgeT0iODgiIHdpZHRoPSIxMCIgaGVpZ2h0PSI0MCIgcng9IjQiLz4KICAgIDxyZWN0IHg9IjMyMiIgeT0iODgiIHdpZHRoPSIxMCIgaGVpZ2h0PSI0MCIgcng9IjQiLz4KICAgIDwhLS0gU21hbGwgZHVtYmJlbGwgaW4gaGFuZHMgLS0+CiAgICA8ZWxsaXBzZSBjeD0iMjc3IiBjeT0iMjYiIHJ4PSI4IiByeT0iMTAiIGZpbGw9IiM0YTRkNTgiLz4KICAgIDxlbGxpcHNlIGN4PSIzNTUiIGN5PSIyNCIgcng9IjgiIHJ5PSIxMCIgZmlsbD0iIzRhNGQ1OCIvPgogIDwvZz4KICA8IS0tIEJhY2tncm91bmQgZXF1aXBtZW50IC0tPgogIDxyZWN0IHg9IjEwIiB5PSI0MCIgd2lkdGg9IjYiIGhlaWdodD0iMTAwIiByeD0iMiIgZmlsbD0iIzNhM2Q0OCIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMjUiIHk9IjU1IiB3aWR0aD0iNiIgaGVpZ2h0PSI4NSIgcng9IjIiIGZpbGw9IiMzYTNkNDgiIG9wYWNpdHk9IjAuNSIvPgogIDxyZWN0IHg9IjQwIiB5PSI0NSIgd2lkdGg9IjYiIGhlaWdodD0iOTUiIHJ4PSIyIiBmaWxsPSIjM2EzZDQ4IiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIExvZ28vYnJhbmRpbmcgLS0+CiAgPHRleHQgeD0iMjAwIiB5PSIxNjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjYjg5NjZhIiBvcGFjaXR5PSIwLjYiIGxldHRlci1zcGFjaW5nPSIzIj5GSVRORVNTPC90ZXh0Pgo8L3N2Zz4=" alt="Gym"/></div>
+      <div class="wcard-body"><h3>Gyms &amp; Fitness Businesses</h3><p>Grow your membership base with targeted ads and free up time with admin support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TEASER -->
+<section id="pricing">
+  <div class="ptease rev">
+    <div class="sec-eye" style="justify-content:center;">Investment</div>
+    <h2>Tailored to your<br><em>budget &amp; needs</em></h2>
+    <p class="sec-sub" style="margin:0 auto 2.5rem;">Every business is different — so we don't do one-size-fits-all pricing. We build a custom package around your specific goals and budget. No long-term contracts, no hidden fees.</p>
+    <div class="ptease-opts">
+      <div class="popt"><h4>Hourly</h4><p>Flexible support</p></div>
+      <div class="pdiv"></div>
+      <div class="popt"><h4>Project</h4><p>One-off work</p></div>
+      <div class="pdiv"></div>
+      <div class="popt"><h4>Retainer</h4><p>Ongoing monthly</p></div>
+    </div>
+    <a href="#contact" class="btn btn-dark">Book a Free Call — Get a Custom Quote</a>
+  </div>
+</section>
+
+<!-- CTA SPLIT -->
+<div class="cta-wrap">
+  <div class="cta-img">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDIwIiB2aWV3Qm94PSIwIDAgODAwIDQyMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InRiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlZGU2ZGEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGNmYzAiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0idHMiPjxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIzIiBzdGREZXZpYXRpb249IjUiIGZsb29kLW9wYWNpdHk9IjAuMSIvPjwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQyMCIgZmlsbD0idXJsKCN0YmcpIi8+CiAgPCEtLSBCYWNrZ3JvdW5kIHdhbGwgLS0+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIyODAiIGZpbGw9IiNlZGU4ZGUiLz4KICA8IS0tIFdpbmRvdyB3YWxsIC0tPgogIDxyZWN0IHg9IjIwMCIgeT0iMjAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMjIwIiBmaWxsPSIjZGRlZWZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIyMDAiIHk9IjIwIiB3aWR0aD0iNCIgaGVpZ2h0PSIyMjAiIGZpbGw9IiNjOGMwYjAiLz4KICA8cmVjdCB4PSI1OTYiIHk9IjIwIiB3aWR0aD0iNCIgaGVpZ2h0PSIyMjAiIGZpbGw9IiNjOGMwYjAiLz4KICA8cmVjdCB4PSIyMDAiIHk9IjEyOCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0IiBmaWxsPSIjYzhjMGIwIi8+CiAgPHJlY3QgeD0iMzk4IiB5PSIyMCIgd2lkdGg9IjQiIGhlaWdodD0iMjIwIiBmaWxsPSIjYzhjMGIwIiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIENpdHkgc2t5bGluZSB0aHJvdWdoIHdpbmRvdyAtLT4KICA8cmVjdCB4PSIyMTAiIHk9IjYwIiB3aWR0aD0iMjgiIGhlaWdodD0iMTY1IiBmaWxsPSIjYjBjNGQ4IiBvcGFjaXR5PSIwLjQiLz4KICA8cmVjdCB4PSIyNDgiIHk9IjQwIiB3aWR0aD0iMjIiIGhlaWdodD0iMTg1IiBmaWxsPSIjYThiY2QwIiBvcGFjaXR5PSIwLjQiLz4KICA8cmVjdCB4PSIyODAiIHk9Ijc1IiB3aWR0aD0iMzUiIGhlaWdodD0iMTUwIiBmaWxsPSIjYjhjOGRjIiBvcGFjaXR5PSIwLjM1Ii8+CiAgPHJlY3QgeD0iMzI1IiB5PSI1MCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE3NSIgZmlsbD0iI2EwYjhkMCIgb3BhY2l0eT0iMC40Ii8+CiAgPHJlY3QgeD0iMzYwIiB5PSI2NSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjE2MCIgZmlsbD0iI2IwYzBkNCIgb3BhY2l0eT0iMC4zNSIvPgogIDxyZWN0IHg9IjQ1MCIgeT0iNDUiIHdpZHRoPSIyNSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNhOGJjZDAiIG9wYWNpdHk9IjAuNCIvPgogIDxyZWN0IHg9IjQ4NSIgeT0iNzAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIxNTUiIGZpbGw9IiNiMGM0ZDgiIG9wYWNpdHk9IjAuMzgiLz4KICA8cmVjdCB4PSI1MjciIHk9IjU1IiB3aWR0aD0iMjAiIGhlaWdodD0iMTcwIiBmaWxsPSIjYTBiNGNjIiBvcGFjaXR5PSIwLjQiLz4KICA8cmVjdCB4PSI1NTciIHk9IjgwIiB3aWR0aD0iMjgiIGhlaWdodD0iMTQ1IiBmaWxsPSIjYjhjOGRjIiBvcGFjaXR5PSIwLjM1Ii8+CiAgPCEtLSBGbG9vciAtLT4KICA8cmVjdCB5PSIyODAiIHdpZHRoPSI4MDAiIGhlaWdodD0iMTQwIiBmaWxsPSIjYzhiZmFlIi8+CiAgPHJlY3QgeT0iMjc4IiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQiIGZpbGw9IiNiOGIwYTAiLz4KICA8IS0tIDQgcGVvcGxlIHN0YW5kaW5nIC0tPgogIDwhLS0gUGVyc29uIDEgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3RzKSI+CiAgICA8ZWxsaXBzZSBjeD0iMTU1IiBjeT0iMjA1IiByeD0iMzgiIHJ5PSI0MiIgZmlsbD0iI2Q0YTA2MCIvPgogICAgPGVsbGlwc2UgY3g9IjE1NSIgY3k9IjE3MiIgcng9IjM4IiByeT0iMjYiIGZpbGw9IiMzYTIwMTAiLz4KICAgIDxwYXRoIGQ9Ik0xMTAgMjQ1IFE4MCAyNjggNzggMzYwIFExMDggMzY4IDE2MCAzNjggUTIxMiAzNjggMjQwIDM2MCBRMjM4IDI2OCAyMDAgMjQ1IFoiIGZpbGw9IiMyZDRhNmUiLz4KICAgIDxwYXRoIGQ9Ik0xMzUgMjUwIFExNTUgMjU2IDE3NSAyNTAgUTE4OCAyNjUgMTg0IDM1OCBRMTU1IDM2MyAxMjYgMzU4IFoiIGZpbGw9IiNmMGVjZTQiLz4KICAgIDxyZWN0IHg9IjE0MyIgeT0iMjAwIiB3aWR0aD0iMjQiIGhlaWdodD0iNTAiIHJ4PSI4IiBmaWxsPSIjZDRhMDYwIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTQzIiBjeT0iMjEwIiByeD0iNiIgcnk9IjciIGZpbGw9IndoaXRlIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTY3IiBjeT0iMjEwIiByeD0iNiIgcnk9IjciIGZpbGw9IndoaXRlIi8+CiAgICA8ZWxsaXBzZSBjeD0iMTQ0IiBjeT0iMjExIiByeD0iNCIgcnk9IjUiIGZpbGw9IiMzZDIwMTAiLz4KICAgIDxlbGxpcHNlIGN4PSIxNjgiIGN5PSIyMTEiIHJ4PSI0IiByeT0iNSIgZmlsbD0iIzNkMjAxMCIvPgogICAgPHBhdGggZD0iTTE0NyAyMjQgUTE1NSAyMzAgMTYzIDIyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjA3ODQwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGNpcmNsZSBjeD0iMTE4IiBjeT0iMjE1IiByPSIzIiBmaWxsPSIjYzlhODRjIi8+CiAgPC9nPgogIDwhLS0gUGVyc29uIDIgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3RzKSI+CiAgICA8ZWxsaXBzZSBjeD0iMzA1IiBjeT0iMjAwIiByeD0iMzgiIHJ5PSI0MiIgZmlsbD0iI2UwYzA5MCIvPgogICAgPGVsbGlwc2UgY3g9IjMwNSIgY3k9IjE2NyIgcng9IjM4IiByeT0iMjQiIGZpbGw9IiMxZTEwMDgiLz4KICAgIDxwYXRoIGQ9Ik0yNjAgMjQwIFEyMzAgMjYzIDIyOCAzNTUgUTI1OCAzNjMgMzEwIDM2MyBRMzYyIDM2MyAzOTAgMzU1IFEzODggMjYzIDM1MCAyNDAgWiIgZmlsbD0iIzZiNDUzMCIvPgogICAgPHBhdGggZD0iTTI4NSAyNDUgUTMwNSAyNTEgMzI1IDI0NSBRMzM4IDI2MCAzMzQgMzUzIFEzMDUgMzU4IDI3NiAzNTMgWiIgZmlsbD0iI2Y1ZjBlOCIvPgogICAgPHJlY3QgeD0iMjkzIiB5PSIxOTUiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1MCIgcng9IjgiIGZpbGw9IiNlMGMwOTAiLz4KICAgIDxlbGxpcHNlIGN4PSIyOTMiIGN5PSIyMDUiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSIzMTciIGN5PSIyMDUiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSIyOTQiIGN5PSIyMDYiIHJ4PSI0IiByeT0iNSIgZmlsbD0iIzFlMGUwOCIvPgogICAgPGVsbGlwc2UgY3g9IjMxOCIgY3k9IjIwNiIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjMWUwZTA4Ii8+CiAgICA8cGF0aCBkPSJNMjk3IDIxOSBRMzA1IDIyNSAzMTMgMjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiNiMDgwNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgogIDwhLS0gUGVyc29uIDMgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3RzKSI+CiAgICA8ZWxsaXBzZSBjeD0iNDk1IiBjeT0iMjAwIiByeD0iMzgiIHJ5PSI0MiIgZmlsbD0iI2M4ODA1MCIvPgogICAgPGVsbGlwc2UgY3g9IjQ5NSIgY3k9IjE2NyIgcng9IjM4IiByeT0iMjQiIGZpbGw9IiMyYTE4MDgiLz4KICAgIDxwYXRoIGQ9Ik00NTAgMjQwIFE0MjAgMjYzIDQxOCAzNTUgUTQ0OCAzNjMgNTAwIDM2MyBRNTUyIDM2MyA1ODAgMzU1IFE1NzggMjYzIDU0MCAyNDAgWiIgZmlsbD0iIzNhNGUyYSIvPgogICAgPHBhdGggZD0iTTQ3NSAyNDUgUTQ5NSAyNTEgNTE1IDI0NSBRNTI4IDI2MCA1MjQgMzUzIFE0OTUgMzU4IDQ2NiAzNTMgWiIgZmlsbD0iI2YwZWNlNCIvPgogICAgPHJlY3QgeD0iNDgzIiB5PSIxOTUiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1MCIgcng9IjgiIGZpbGw9IiNjODgwNTAiLz4KICAgIDxlbGxpcHNlIGN4PSI0ODMiIGN5PSIyMDUiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSI1MDciIGN5PSIyMDUiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSI0ODQiIGN5PSIyMDYiIHJ4PSI0IiByeT0iNSIgZmlsbD0iIzNkMjAxMCIvPgogICAgPGVsbGlwc2UgY3g9IjUwOCIgY3k9IjIwNiIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjM2QyMDEwIi8+CiAgICA8cGF0aCBkPSJNNDg3IDIxOSBRNDk1IDIyNSA1MDMgMjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiNhMDYwMzAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgogIDwhLS0gUGVyc29uIDQgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI3RzKSI+CiAgICA8ZWxsaXBzZSBjeD0iNjQ1IiBjeT0iMjA1IiByeD0iMzgiIHJ5PSI0MiIgZmlsbD0iI2RiYTg3OCIvPgogICAgPGVsbGlwc2UgY3g9IjY0NSIgY3k9IjE3MiIgcng9IjM4IiByeT0iMjYiIGZpbGw9IiM0YTMwMjAiLz4KICAgIDxwYXRoIGQ9Ik02MDAgMjQ1IFE1NzAgMjY4IDU2OCAzNjAgUTU5OCAzNjggNjUwIDM2OCBRNzAyIDM2OCA3MzAgMzYwIFE3MjggMjY4IDY5MCAyNDUgWiIgZmlsbD0iIzRhMzU2NSIvPgogICAgPHBhdGggZD0iTTYyNSAyNTAgUTY0NSAyNTYgNjY1IDI1MCBRNjc4IDI2NSA2NzQgMzU4IFE2NDUgMzYzIDYxNiAzNTggWiIgZmlsbD0iI2YwZWNlNCIvPgogICAgPHJlY3QgeD0iNjMzIiB5PSIyMDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1MCIgcng9IjgiIGZpbGw9IiNkYmE4NzgiLz4KICAgIDxlbGxpcHNlIGN4PSI2MzMiIGN5PSIyMTAiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSI2NTciIGN5PSIyMTAiIHJ4PSI2IiByeT0iNyIgZmlsbD0id2hpdGUiLz4KICAgIDxlbGxpcHNlIGN4PSI2MzQiIGN5PSIyMTEiIHJ4PSI0IiByeT0iNSIgZmlsbD0iIzNkMjAxMCIvPgogICAgPGVsbGlwc2UgY3g9IjY1OCIgY3k9IjIxMSIgcng9IjQiIHJ5PSI1IiBmaWxsPSIjM2QyMDEwIi8+CiAgICA8cGF0aCBkPSJNNjM3IDIyNCBRNjQ1IDIzMCA2NTMgMjI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNiMDgwNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8Y2lyY2xlIGN4PSI2MDgiIGN5PSIyMTUiIHI9IjMiIGZpbGw9IiNjOWE4NGMiLz4KICA8L2c+Cjwvc3ZnPg==" alt="Team working"/>
+  </div>
+  <div class="cta-txt rev">
+    <div class="sec-eye">Let's Talk</div>
+    <h2>Ready to take your business <em>further?</em></h2>
+    <p>Book a free 30-minute consultation — no obligation, no pressure. Just a friendly conversation about how we can support your growth.</p>
+    <a href="#contact" class="btn btn-gold" style="align-self:flex-start;">Book Your Free Call →</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--off);">
+  <div class="rev">
+    <div class="sec-eye">Get In Touch</div>
+    <h2>Let's work <em>together</em></h2>
+  </div>
+  <div class="cont-grid">
+    <div class="rev">
+      <p class="sec-sub">Ready to get started? Book a free consultation or send us a message and we'll be in touch within one business day.</p>
+      <div class="ci-list">
+        <div class="ci">
+          <div class="ci-ico">📧</div>
+          <div class="ci-body"><h4>Email</h4><a href="mailto:hoibusinesssolutions@gmail.com">hoibusinesssolutions@gmail.com</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-ico">📱</div>
+          <div class="ci-body"><h4>Call or WhatsApp</h4><a href="tel:07825950706">07825 950706</a><p>Mon–Fri, 9am–6pm</p></div>
+        </div>
+        <div class="ci">
+          <div class="ci-ico">📍</div>
+          <div class="ci-body"><h4>Location</h4><p>London, United Kingdom<br/>Remote service UK-wide</p></div>
+        </div>
+        <div class="ci" style="border:none;">
+          <div class="ci-ico">🏢</div>
+          <div class="ci-body"><h4>Registered Company</h4><p>House of Indulge Ltd<br/>Registered in England &amp; Wales</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="form">
+        <div class="frow">
+          <input type="text" placeholder="Your name"/>
+          <input type="email" placeholder="Email address"/>
+        </div>
+        <input type="text" placeholder="Business name"/>
+        <select>
+          <option value="" disabled selected>I'm interested in...</option>
+          <option>Virtual Assistant / Admin Support</option>
+          <option>HR Consultancy</option>
+          <option>Recruitment Support</option>
+          <option>Facebook &amp; Instagram Ads</option>
+          <option>Social Media Marketing</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
+        <textarea placeholder="Tell us about your business and what you need..."></textarea>
+        <button type="button">Send Message →</button>
+        <p style="font-size:.78rem;color:var(--light);text-align:center;">Or book directly via <a href="#" style="color:var(--gold);">Calendly</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">HOI <span>Business Solutions</span></div>
+  <div class="flinks">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#who">Who We Help</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="fcopy">© 2025 House of Indulge Ltd. Registered in England &amp; Wales.</div>
+</footer>
+
+<script>
+const els = document.querySelectorAll('.rev');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('on'), i * 100);
+      obs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.08});
+els.forEach(el => obs.observe(el));
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('sc', window.scrollY > 20);
+});
+</script>
+</body>
+</html>
