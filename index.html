@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HOI Business Solutions | Business Support & Social Media Advertising London</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff;--off:#fafaf8;--cream:#f5f2ed;--border:#e8e4de;
+  --text:#1a1814;--mid:#4a4640;--light:#8a8480;
+  --gold:#b8966a;--gold2:#9a7a52;--gold3:#e8d5bc;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:#fff;color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5rem;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+nav.sc{box-shadow:0 2px 24px rgba(0,0,0,.06);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--text);text-decoration:none;letter-spacing:.06em;}
+.logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--mid);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--text)!important;color:#fff!important;padding:.65rem 1.5rem;border-radius:2px;font-weight:600!important;}
+.nav-cta:hover{background:var(--gold)!important;}
+
+/* BUTTONS */
+.btn{display:inline-block;text-decoration:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.06em;border-radius:2px;transition:background .25s,color .25s,border-color .25s;}
+.btn-dark{background:var(--text);color:#fff;padding:.95rem 2.2rem;border:2px solid var(--text);}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold);}
+.btn-border{background:transparent;color:var(--text);padding:.95rem 2.2rem;border:2px solid var(--border);}
+.btn-border:hover{border-color:var(--gold);color:var(--gold);}
+.btn-gold{background:var(--gold);color:#fff;padding:1rem 2.5rem;border:2px solid var(--gold);}
+.btn-gold:hover{background:transparent;color:var(--gold);}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:76px;}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5rem;}
+.eyebrow{display:inline-flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.08;margin-bottom:1.75rem;}
+h1 em,h2 em{font-style:italic;color:var(--gold);}
+.hero-desc{font-size:1.05rem;font-weight:300;color:var(--mid);line-height:1.75;max-width:440px;margin-bottom:2.5rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.hero-r{position:relative;overflow:hidden;}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.hero-card{position:absolute;bottom:2.5rem;left:2rem;right:2rem;background:rgba(255,255,255,.97);border:1px solid var(--border);border-radius:4px;padding:1.5rem 2rem;display:flex;gap:2.5rem;}
+.hstat h4{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold);line-height:1;}
+.hstat p{font-size:.78rem;color:var(--mid);margin-top:.25rem;}
+
+/* TRUST */
+.trust{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 5rem;display:flex;align-items:center;overflow-x:auto;gap:0;}
+.ti{display:flex;align-items:center;gap:.6rem;white-space:nowrap;font-size:.78rem;font-weight:500;color:var(--mid);padding:0 2.5rem;border-right:1px solid var(--border);}
+.ti:first-child{padding-left:0;}
+.ti:last-child{border-right:none;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+
+/* SECTIONS */
+section{padding:6rem 5rem;}
+.sec-eye{display:inline-flex;align-items:center;gap:.75rem;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.sec-eye::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3.5vw,3.4rem);font-weight:300;line-height:1.12;margin-bottom:1.25rem;}
+.sec-sub{font-size:.98rem;color:var(--mid);line-height:1.75;font-weight:300;max-width:520px;}
+.divline{width:48px;height:1px;background:var(--gold);margin:1.75rem 0;}
+
+/* SERVICES */
+.svc-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+.scard{background:#fff;padding:2.75rem;position:relative;transition:background .3s;overflow:hidden;}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+.scard:hover{background:var(--off);}
+.scard:hover::before{transform:scaleX(1);}
+.sico{width:48px;height:48px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.5rem;background:var(--cream);}
+.scard h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;margin-bottom:.75rem;}
+.scard p{font-size:.87rem;color:var(--mid);line-height:1.7;font-weight:300;}
+.stag{display:inline-block;margin-top:1.25rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .75rem;border-radius:1px;}
+.tops{background:#f0eeeb;color:var(--mid);}
+.tgrowth{background:#f5ede0;color:var(--gold2);}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;}
+.about-img{overflow:hidden;min-height:560px;}
+.about-img img{width:100%;height:100%;object-fit:cover;}
+.about-txt{padding:5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream);}
+.apts{margin-top:2rem;}
+.apt{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 0;border-bottom:1px solid var(--border);}
+.apt:last-child{border-bottom:none;}
+.apt-ico{width:36px;height:36px;flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.apt h4{font-size:.92rem;font-weight:600;margin-bottom:.2rem;}
+.apt p{font-size:.83rem;color:var(--mid);line-height:1.6;font-weight:300;}
+
+/* HOW */
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.how-img{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.1);}
+.how-img img{width:100%;height:480px;object-fit:cover;}
+.how-badge{position:absolute;bottom:2rem;left:2rem;right:2rem;background:#fff;border-radius:4px;padding:1.25rem 1.5rem;border-left:3px solid var(--gold);}
+.how-badge p{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--mid);line-height:1.6;}
+.how-badge span{font-size:.72rem;font-weight:600;color:var(--gold);display:block;margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase;}
+.steps{margin-top:2.5rem;}
+.step{display:flex;gap:1.75rem;padding:1.75rem 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.snum{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold3);line-height:1;min-width:2.5rem;}
+.sbody h3{font-size:.95rem;font-weight:600;margin-bottom:.35rem;}
+.sbody p{font-size:.85rem;color:var(--mid);line-height:1.65;font-weight:300;}
+
+/* WHO */
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.wcard{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
+.wcard:hover{box-shadow:0 12px 40px rgba(0,0,0,.08);transform:translateY(-4px);}
+.wcard-img{height:180px;overflow:hidden;}
+.wcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.wcard:hover .wcard-img img{transform:scale(1.04);}
+.wcard-body{padding:1.5rem;}
+.wcard-body h3{font-size:.95rem;font-weight:600;margin-bottom:.4rem;}
+.wcard-body p{font-size:.82rem;color:var(--mid);line-height:1.55;font-weight:300;}
+
+/* PRICING TEASER */
+.ptease{text-align:center;max-width:640px;margin:0 auto;}
+.ptease-opts{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin:2.5rem 0;}
+.popt{text-align:center;}
+.popt h4{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);}
+.popt p{font-size:.82rem;color:var(--light);margin-top:.25rem;}
+.pdiv{width:1px;background:var(--border);}
+
+/* CTA SPLIT */
+.cta-wrap{display:grid;grid-template-columns:1fr 1fr;}
+.cta-img{overflow:hidden;min-height:420px;}
+.cta-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.7);}
+.cta-txt{padding:5rem;display:flex;flex-direction:column;justify-content:center;background:var(--text);}
+.cta-txt .sec-eye{color:var(--gold3);}
+.cta-txt .sec-eye::before{background:var(--gold3);}
+.cta-txt h2{color:#fff;}
+.cta-txt p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:2rem;font-weight:300;}
+
+/* CONTACT */
+.cont-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;margin-top:3.5rem;}
+.ci-list{}
+.ci{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem 0;border-bottom:1px solid var(--border);}
+.ci:last-child{border-bottom:none;}
+.ci-ico{width:40px;height:40px;flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.ci-body h4{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;}
+.ci-body p,.ci-body a{font-size:.92rem;color:var(--mid);text-decoration:none;font-weight:300;}
+.ci-body a:hover{color:var(--gold);}
+.form{display:flex;flex-direction:column;gap:1rem;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form input,.form select,.form textarea{background:#fff;border:1px solid var(--border);border-radius:2px;padding:.9rem 1.1rem;color:var(--text);font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:300;width:100%;outline:none;transition:border-color .2s;}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold);}
+.form input::placeholder,.form textarea::placeholder{color:var(--light);}
+.form textarea{resize:vertical;min-height:110px;}
+.form select{color:var(--mid);}
+.form button{background:var(--text);color:#fff;padding:1rem;border:2px solid var(--text);border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;width:100%;transition:background .25s,border-color .25s;}
+.form button:hover{background:var(--gold);border-color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--text);padding:3rem 5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#fff;}
+.flogo span{color:var(--gold);}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
+.flinks a:hover{color:var(--gold);}
+.fcopy{font-size:.75rem;color:rgba(255,255,255,.25);}
+
+/* ANIMATE */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.au{animation:fadeUp .7s ease both;}
+.au2{animation:fadeUp .7s .1s ease both;}
+.au3{animation:fadeUp .7s .2s ease both;}
+.au4{animation:fadeUp .7s .3s ease both;}
+.ai{animation:fadeIn 1s .2s ease both;}
+.rev{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.rev.on{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:1rem 2rem;}
+  .nav-links{display:none;}
+  section{padding:4rem 2rem;}
+  .hero{grid-template-columns:1fr;}
+  .hero-l{padding:4rem 2rem;}
+  .hero-r{min-height:400px;}
+  .trust{padding:1rem 2rem;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .about-wrap{grid-template-columns:1fr;}
+  .about-img{min-height:320px;}
+  .about-txt{padding:3rem 2rem;}
+  .how-grid{grid-template-columns:1fr;gap:3rem;}
+  .who-grid{grid-template-columns:1fr 1fr;}
+  .cta-wrap{grid-template-columns:1fr;}
+  .cta-img{min-height:260px;}
+  .cta-txt{padding:3rem 2rem;}
+  .cont-grid{grid-template-columns:1fr;gap:3rem;}
+  footer{padding:2rem;flex-direction:column;text-align:center;}
+  .frow{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:1fr;}
+  .who-grid{grid-template-columns:1fr;}
+  .hero-card{flex-wrap:wrap;gap:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#home" class="logo">HOI <span>Business Solutions</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#who">Who We Help</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" style="padding:0;padding-top:76px;">
+  <div class="hero-l">
+    <div class="eyebrow au">London's Business Growth Partner</div>
+    <h1 class="au2">Operations handled.<br><em>Growth delivered.</em></h1>
+    <p class="hero-desc au3">HOI Business Solutions helps London's small businesses run smoother and grow faster — from professional admin and HR support to results-driven social media advertising.</p>
+    <div class="hero-btns au4">
+      <a href="#contact" class="btn btn-dark">Book a Free Consultation</a>
+      <a href="#services" class="btn btn-border">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-r ai">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85&fit=crop" alt="Professional business consultant"/>
+    <div class="hero-card">
+      <div class="hstat"><h4>100%</h4><p>Remote &amp; flexible</p></div>
+      <div class="hstat"><h4>UK Ltd</h4><p>Registered company</p></div>
+      <div class="hstat"><h4>2-in-1</h4><p>Ops + Growth</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="ti"><div class="dot"></div>Registered Ltd Company — England &amp; Wales</div>
+  <div class="ti"><div class="dot"></div>London Based, UK-Wide Remote</div>
+  <div class="ti"><div class="dot"></div>No Long-Term Contracts</div>
+  <div class="ti"><div class="dot"></div>Fast Onboarding</div>
+  <div class="ti"><div class="dot"></div>Results-Driven Approach</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-hdr rev">
+    <div>
+      <div class="sec-eye">What We Do</div>
+      <h2>Two ways we help your<br><em>business thrive</em></h2>
+    </div>
+    <p class="sec-sub" style="max-width:360px;">Whether you need operational support to run smoothly, or a marketing partner to win more customers — we have the solution.</p>
+  </div>
+  <div class="svc-grid rev">
+    <div class="scard">
+      <div class="sico">🖥️</div>
+      <h3>Virtual Assistant Support</h3>
+      <p>Your dedicated remote assistant handling email, diary coordination, travel booking, customer follow-ups, and research — so you can focus on growth.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">🗂️</div>
+      <h3>Business Administration</h3>
+      <p>Professional admin to keep your business organised — document management, data entry, invoice tracking, process creation, and record keeping.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">👥</div>
+      <h3>HR Consultancy</h3>
+      <p>Expert HR for small businesses — employment contracts, staff handbooks, onboarding, disciplinary support, and UK employment law compliance.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard">
+      <div class="sico">🔍</div>
+      <h3>Recruitment Support</h3>
+      <p>End-to-end hiring assistance — job descriptions, job posting, CV screening, candidate shortlisting, interview scheduling, and offer coordination.</p>
+      <span class="stag tops">Operations</span>
+    </div>
+    <div class="scard" style="border-top:3px solid var(--gold);">
+      <div class="sico" style="background:#f5ede0;border-color:#e8d5bc;">📱</div>
+      <h3>Facebook &amp; Instagram Ads</h3>
+      <p>Targeted Meta advertising campaigns that put your business in front of ready-to-buy customers. Full setup, management, optimisation, and monthly reporting.</p>
+      <span class="stag tgrowth">Growth</span>
+    </div>
+    <div class="scard" style="border-top:3px solid var(--gold);">
+      <div class="sico" style="background:#f5ede0;border-color:#e8d5bc;">📈</div>
+      <h3>Social Media Marketing</h3>
+      <p>Strategy, content scheduling, community management, and analytics — a complete done-for-you social presence that builds your brand and drives enquiries.</p>
+      <span class="stag tgrowth">Growth</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-wrap">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&q=85&fit=crop" alt="Professional team in a modern office"/>
+  </div>
+  <div class="about-txt rev">
+    <div class="sec-eye">About HOI</div>
+    <h2>Your dedicated<br><em>remote partner</em></h2>
+    <p class="sec-sub">Founded to give small businesses access to professional support — without the cost of full-time staff. We understand real business challenges and tailor everything to your needs.</p>
+    <div class="divline"></div>
+    <div class="apts">
+      <div class="apt">
+        <div class="apt-ico">💼</div>
+        <div>
+          <h4>Business Management Experience</h4>
+          <p>Proven track record across business operations, HR, and administration in multiple UK sectors.</p>
+        </div>
+      </div>
+      <div class="apt">
+        <div class="apt-ico">👥</div>
+        <div>
+          <h4>Recruitment &amp; HR Expertise</h4>
+          <p>Deep knowledge of talent acquisition, people management, and UK employment law compliance.</p>
+        </div>
+      </div>
+      <div class="apt">
+        <div class="apt-ico">📱</div>
+        <div>
+          <h4>Digital Marketing Capabilities</h4>
+          <p>Meta advertising and social media strategy to generate real leads and measurable growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-grid">
+    <div class="how-img rev">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=85&fit=crop" alt="Business consultation"/>
+      <div class="how-badge">
+        <p>"Professional, responsive, and genuinely invested in our success."</p>
+        <span>London Small Business Owner</span>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="sec-eye">The Process</div>
+      <h2>Simple to start,<br><em>built to last.</em></h2>
+      <p class="sec-sub">No complicated processes, no long-term lock-ins. We make it straightforward to get the support your business needs.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="snum">01</div>
+          <div class="sbody"><h3>Free Consultation Call</h3><p>A 30-minute call to understand your business, challenges, and exactly what support will make the biggest difference.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">02</div>
+          <div class="sbody"><h3>Tailored Proposal</h3><p>We put together a custom plan — services, scope, and pricing — designed specifically around your business and budget.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">03</div>
+          <div class="sbody"><h3>Quick Onboarding</h3><p>We get started fast with a smooth, simple onboarding. No lengthy delays — results from day one.</p></div>
+        </div>
+        <div class="step">
+          <div class="snum">04</div>
+          <div class="sbody"><h3>Your Business Grows</h3><p>With the day-to-day handled and new customers coming in, you focus entirely on growth.</p></div>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-dark" style="margin-top:2rem;">Get Started Today →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section id="who" style="background:var(--cream);">
+  <div class="rev" style="text-align:center;max-width:560px;margin:0 auto;">
+    <div class="sec-eye" style="justify-content:center;">Who We Help</div>
+    <h2>Built for <em>ambitious businesses</em></h2>
+    <p class="sec-sub" style="margin:0 auto;">We work with business owners who are ready to delegate, scale, and grow.</p>
+  </div>
+  <div class="who-grid rev">
+    <div class="wcard">
+      <div class="wcard-img"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&q=80&fit=crop" alt="Startup office"/></div>
+      <div class="wcard-body"><h3>Startups &amp; SMEs</h3><p>Get professional support from day one without the overhead of full-time hires.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80&fit=crop" alt="Aesthetic clinic"/></div>
+      <div class="wcard-body"><h3>Aesthetic Clinics &amp; Med Spas</h3><p>HR compliance and paid social campaigns that keep your appointment books full.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80&fit=crop" alt="Estate agent"/></div>
+      <div class="wcard-body"><h3>Estate Agents &amp; Property</h3><p>Lead generation and operational support for London property professionals.</p></div>
+    </div>
+    <div class="wcard">
+      <div class="wcard-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80&fit=crop" alt="Gym"/></div>
+      <div class="wcard-body"><h3>Gyms &amp; Fitness Businesses</h3><p>Grow your membership base with targeted ads and free up time with admin support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TEASER -->
+<section id="pricing">
+  <div class="ptease rev">
+    <div class="sec-eye" style="justify-content:center;">Investment</div>
+    <h2>Tailored to your<br><em>budget &amp; needs</em></h2>
+    <p class="sec-sub" style="margin:0 auto 2.5rem;">Every business is different — so we don't do one-size-fits-all pricing. We build a custom package around your specific goals and budget. No long-term contracts, no hidden fees.</p>
+    <div class="ptease-opts">
+      <div class="popt"><h4>Hourly</h4><p>Flexible support</p></div>
+      <div class="pdiv"></div>
+      <div class="popt"><h4>Project</h4><p>One-off work</p></div>
+      <div class="pdiv"></div>
+      <div class="popt"><h4>Retainer</h4><p>Ongoing monthly</p></div>
+    </div>
+    <a href="#contact" class="btn btn-dark">Book a Free Call — Get a Custom Quote</a>
+  </div>
+</section>
+
+<!-- CTA SPLIT -->
+<div class="cta-wrap">
+  <div class="cta-img">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=85&fit=crop" alt="Team working"/>
+  </div>
+  <div class="cta-txt rev">
+    <div class="sec-eye">Let's Talk</div>
+    <h2>Ready to take your business <em>further?</em></h2>
+    <p>Book a free 30-minute consultation — no obligation, no pressure. Just a friendly conversation about how we can support your growth.</p>
+    <a href="#contact" class="btn btn-gold" style="align-self:flex-start;">Book Your Free Call →</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--off);">
+  <div class="rev">
+    <div class="sec-eye">Get In Touch</div>
+    <h2>Let's work <em>together</em></h2>
+  </div>
+  <div class="cont-grid">
+    <div class="rev">
+      <p class="sec-sub">Ready to get started? Book a free consultation or send us a message and we'll be in touch within one business day.</p>
+      <div class="ci-list">
+        <div class="ci">
+          <div class="ci-ico">📧</div>
+          <div class="ci-body"><h4>Email</h4><a href="/cdn-cgi/l/email-protection#036b6c6a6176706a6d667070706c6f76776a6c6d7043646e626a6f2d606c6e"><span class="__cf_email__" data-cfemail="bdd5d2d4dfc8ced4d3d8cececed2d1c8c9d4d2d3cefddad0dcd4d193ded2d0">[email&#160;protected]</span></a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-ico">📱</div>
+          <div class="ci-body"><h4>Call or WhatsApp</h4><a href="tel:07825950706">07825 950706</a><p>Mon–Fri, 9am–6pm</p></div>
+        </div>
+        <div class="ci">
+          <div class="ci-ico">📍</div>
+          <div class="ci-body"><h4>Location</h4><p>London, United Kingdom<br/>Remote service UK-wide</p></div>
+        </div>
+        <div class="ci" style="border:none;">
+          <div class="ci-ico">🏢</div>
+          <div class="ci-body"><h4>Registered Company</h4><p>House of Indulge Ltd<br/>Registered in England &amp; Wales</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="rev">
+      <form class="form" action="https://formspree.io/f/xaqpqbnn" method="POST">
+        <div class="frow">
+          <input type="text" name="name" placeholder="Your name" required/>
+          <input type="email" name="email" placeholder="Email address" required/>
+        </div>
+        <input type="text" name="business" placeholder="Business name"/>
+        <select name="service">
+          <option value="" disabled selected>I'm interested in...</option>
+          <option>Virtual Assistant / Admin Support</option>
+          <option>HR Consultancy</option>
+          <option>Recruitment Support</option>
+          <option>Facebook &amp; Instagram Ads</option>
+          <option>Social Media Marketing</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your business and what you need..."></textarea>
+        <button type="submit">Send Message →</button>
+        <p style="font-size:.78rem;color:var(--light);text-align:center;">Or book directly via <a href="#" style="color:var(--gold);">Calendly</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">HOI <span>Business Solutions</span></div>
+  <div class="flinks">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#who">Who We Help</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="fcopy">© 2025 House of Indulge Ltd. Registered in England &amp; Wales.</div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const els = document.querySelectorAll('.rev');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('on'
